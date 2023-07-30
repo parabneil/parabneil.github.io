@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6e3b43d.css",
-    "main.js": "/static/js/main.1abea1e8.js",
+    "main.css": "/static/css/main.b6d8dfc4.css",
+    "main.js": "/static/js/main.c384fcad.js",
     "static/js/787.e5874690.chunk.js": "/static/js/787.e5874690.chunk.js",
-    "static/media/about.jpeg": "/static/media/about.cb67d62b4a105a26f027.jpeg",
-    "static/media/profile.jpeg": "/static/media/profile.cb67d62b4a105a26f027.jpeg",
+    "static/media/Narayan Parab - Software Developer.pdf": "/static/media/Narayan Parab - Software Developer.e50eb805205810ae3ba4.pdf",
+    "static/media/airbnbCapture.JPG": "/static/media/airbnbCapture.ab06eece65693d90b9ec.JPG",
+    "static/media/SportsInteractive.JPG": "/static/media/SportsInteractive.2398a9345191a21d3b25.JPG",
+    "static/media/about.png": "/static/media/about.d08864c19752c2593448.png",
+    "static/media/profile.png": "/static/media/profile.d08864c19752c2593448.png",
+    "static/media/twitter.JPG": "/static/media/twitter.84480d1bdc43eb6380c1.JPG",
+    "static/media/mealfinder.JPG": "/static/media/mealfinder.80a65b03ee67ac91dade.JPG",
+    "static/media/facebook.JPG": "/static/media/facebook.e8583d9b095d2fda8888.JPG",
+    "static/media/google.JPG": "/static/media/google.0c00847e99a9eb03961e.JPG",
+    "static/media/todoist.JPG": "/static/media/todoist.372d53b3f715b99750a0.JPG",
+    "static/media/calculator.JPG": "/static/media/calculator.d47e26315a0630767937.JPG",
     "static/media/testimonial3.png": "/static/media/testimonial3.2e18bfe27c6d2e2e9fdc.png",
-    "static/media/work2.jpg": "/static/media/work2.e52a0c2981a6c11ba468.jpg",
     "static/media/testimonial2.png": "/static/media/testimonial2.39a53f7f092f07f5bceb.png",
-    "static/media/work4.jpg": "/static/media/work4.aee985961b648f4df1f2.jpg",
-    "static/media/work5.jpg": "/static/media/work5.094ec4a2224db8908873.jpg",
-    "static/media/work1.jpg": "/static/media/work1.321b4ae3bf404acdfdc6.jpg",
-    "static/media/work3.jpg": "/static/media/work3.135e9065694bc13dc31d.jpg",
     "static/media/website-logo.png": "/static/media/website-logo.711f6cd778c47ae1520a.png",
     "static/media/testimonial1.png": "/static/media/testimonial1.89079c1d25f2c94ceb89.png",
-    "static/media/John-Cv.pdf": "/static/media/John-Cv.e83747cf513e0b21a7f1.pdf",
     "index.html": "/index.html",
-    "main.a6e3b43d.css.map": "/static/css/main.a6e3b43d.css.map",
-    "main.1abea1e8.js.map": "/static/js/main.1abea1e8.js.map",
+    "main.b6d8dfc4.css.map": "/static/css/main.b6d8dfc4.css.map",
+    "main.c384fcad.js.map": "/static/js/main.c384fcad.js.map",
     "787.e5874690.chunk.js.map": "/static/js/787.e5874690.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6e3b43d.css",
-    "static/js/main.1abea1e8.js"
+    "static/css/main.b6d8dfc4.css",
+    "static/js/main.c384fcad.js"
   ]
 }
