@@ -1,0 +1,155 @@
+{
+  "name": "Narayan Parab",
+  "designation": [
+    "Software Developer",
+    "Frontend Developer",
+    "ReactJS Developer",
+    "Python Developer",
+    "Backend Developer",
+    "Full Stack Developer",
+    "Graphic Designer",
+    "Photographer"
+  ],
+  "about": "Aspiring web developer with 4+ years of experience in digital marketing firm which mainly focuses on online brand promotion using social media channels. Recently I pivoted my career from digital marketing to website design due to my passion for web space development and problem solving abilities.",
+  "dateOfBirth": "07-November-1996",
+
+  "educationAndCertifications": [
+    {
+      "year": "2012",
+      "course": "Course 1",
+      "university": "Mumbai University"
+    },
+    {
+      "year": "2012",
+      "course": "Course 1",
+      "university": "Mumbai University"
+    },
+    {
+      "year": "2012",
+      "course": "Course 1",
+      "university": "Mumbai University"
+    },
+    {
+      "year": "2012",
+      "course": "Course 1",
+      "university": "Mumbai University"
+    }
+  ],
+  "workexperience": [
+    {
+      "year": "2012",
+      "designation": "Software Developer",
+      "companyName": "Teknobuilt",
+      "companyLogo": ""
+    },
+    {
+      "year": "2012",
+      "designation": "Software Developer",
+      "companyName": "Teknobuilt",
+      "companyLogo": ""
+    }
+  ],
+  "skills": [
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillProfiency": ""
+    }
+  ],
+  "projects": [
+    {
+      "projectTitle": "Project 1",
+      "projectDescription": "Project Description",
+      "projectPreview": "",
+      "projectLogo": "",
+      "projectCode": "",
+      "projectDemo": "",
+      "projectCategory": ""
+    },
+    {
+      "projectTitle": "Project 1",
+      "projectDescription": "Project Description",
+      "projectPreview": "",
+      "projectLogo": "",
+      "projectCode": "",
+      "projectDemo": "",
+      "projectCategory": ""
+    },
+    {
+      "projectTitle": "Project 1",
+      "projectDescription": "Project Description",
+      "projectPreview": "",
+      "projectLogo": "",
+      "projectCode": "",
+      "projectDemo": "",
+      "projectCategory": ""
+    }
+  ],
+  "socialMedia": [
+    {
+      "socialIcon": "",
+      "socialLink": "",
+      "socialUserName": ""
+    },
+    {
+      "socialIcon": "",
+      "socialLink": "",
+      "socialUserName": ""
+    },
+    {
+      "socialIcon": "",
+      "socialLink": "",
+      "socialUserName": ""
+    },
+    {
+      "socialIcon": "",
+      "socialLink": "",
+      "socialUserName": ""
+    },
+    {
+      "socialIcon": "",
+      "socialLink": "",
+      "socialUserName": ""
+    },
+    {
+      "socialIcon": "",
+      "socialLink": "",
+      "socialUserName": ""
+    }
+  ]
+}
