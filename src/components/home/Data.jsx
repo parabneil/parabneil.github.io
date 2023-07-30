@@ -8,7 +8,10 @@ const Data = () => {
 
       <h3 className="home__subtitle">{resumeData.designation[0]}</h3>
       <p className="home__description">
-        {resumeData.designation.filter((d, index) => index > 0).join(", ")}
+        {/* {resumeData.designation.filter((d, index) => index > 0).join(", ")} */}
+        A Software Developer with experience specializing in user interface
+        design, web application development, and continuous improvement.
+        Proficient with HTML, CSS, Javascript, and React JS.
       </p>
       <a href="#contact" className="button button--flex">
         Say Hello

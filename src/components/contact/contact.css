@@ -1,5 +1,5 @@
 .contact__container {
-    grid-template-columns: repeat(2, max-content);
+    /* grid-template-columns: repeat(2, max-content); */
     justify-content: center;
     column-gap: 6rem;
     padding-bottom: 3rem;
@@ -15,9 +15,11 @@
 }
 
 .contact__info {
-    display: grid;
+    /* display: grid;
     row-gap: 1rem;
-    grid-template-columns: 300px;
+    grid-template-columns: 300px; */
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact__card {
@@ -26,6 +28,8 @@
     padding: 1rem;
     border-radius: 0.75rem;
     text-align: center;
+    width: 15rem;
+    margin: 1rem;
 }
 
 .contact__card-icon {
@@ -125,6 +129,9 @@
     }
 
     .contact__info {
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: 300px;
         justify-content: center;
     }
 

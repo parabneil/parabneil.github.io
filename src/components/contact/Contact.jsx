@@ -14,32 +14,32 @@ const Contact = () => {
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">parab.neil25@gmail.com</span>
-              <a href="#" className="contact__button">
+              {/* <a href="#" className="contact__button">
                 Email me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
+              </a> */}
             </div>
             <div className="contact__card">
               <i className="bx bxl-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">+91 88986 13030</span>
-              <a href="#" className="contact__button">
+              {/* <a href="#" className="contact__button">
                 Message me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
+              </a> */}
             </div>
             <div className="contact__card">
               <i className="bx bxl-linkedin contact__card-icon"></i>
               <h3 className="contact__card-title">LinkedIn</h3>
-              <span className="contact__card-data">@narayanparab</span>
-              <a href="#" className="contact__button">
+              <span className="contact__card-data">/narayan-parab</span>
+              {/* <a href="#" className="contact__button">
                 Connect with me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
-        <div className="contact__content">
+        {/* <div className="contact__content">
           <h3 className="contact__title">Write me your projects</h3>
           <form className="contact__form">
             <div className="contact__form-div">
@@ -92,7 +92,7 @@ const Contact = () => {
               </svg>
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );

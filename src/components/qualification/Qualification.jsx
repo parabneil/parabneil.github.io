@@ -61,7 +61,6 @@ const Qualification = () => {
                 <span className="qualification__line"></span>
               </div>
             </div>
-
             <div className="qualification__data">
               <div></div>
               <div>
@@ -70,13 +69,50 @@ const Qualification = () => {
               </div>
               <div>
                 <h3 className="qualification__title">
-                  Bachelors of Science (Computer Science)
+                  Bachelor of Science - Computer Science
                 </h3>
                 <span className="qualification__subtitle">
                   University of Mumbai
                 </span>
                 <div className="qualification__calender">
                   <i className="uil uil-calender-alt"></i>2014 - 2017
+                </div>
+              </div>
+            </div>
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">
+                  Higher Secondary Certificate (HSC) - Computer Science
+                </h3>
+                <span className="qualification__subtitle">
+                  Maharashtra state board of secondary & higher secondary
+                  education
+                </span>
+                <div className="qualification__calender">
+                  <i className="uil uil-calender-alt"></i>2012 - 2014
+                </div>
+              </div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+            </div>
+            <div className="qualification__data">
+              <div></div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+              <div>
+                <h3 className="qualification__title">
+                  Secondary School Certificate (SSC)
+                </h3>
+                <span className="qualification__subtitle">
+                  Maharashtra State Board of Secondary & Higher Secondary
+                  Education
+                </span>
+                <div className="qualification__calender">
+                  <i className="uil uil-calender-alt"></i>2012
                 </div>
               </div>
             </div>
@@ -109,13 +145,29 @@ const Qualification = () => {
                 <span className="qualification__line"></span>
               </div>
               <div>
-                <h3 className="qualification__title">
-                  Content Writer & Graphic Designer
-                </h3>
-                <span className="qualification__subtitle">Ornamax</span>
+                <h3 className="qualification__title">Graphic Designer</h3>
+                <span className="qualification__subtitle">
+                  Ornamax Web Solutions
+                </span>
                 <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2017 - 2022
+                  <i className="uil uil-calender-alt"></i>2019 - 2022
                 </div>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">Content Writer </h3>
+                <span className="qualification__subtitle">
+                  Ornamax Web Solutions
+                </span>
+                <div className="qualification__calender">
+                  <i className="uil uil-calender-alt"></i>2017 - 2019
+                </div>
+              </div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
               </div>
             </div>
           </div>

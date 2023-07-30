@@ -5,9 +5,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">
-          <span>NarayanParab</span>.dev
-        </h1>
+        <a href="#home">
+          <h1 className="footer__title">
+            <span>NarayanParab</span>.dev
+          </h1>
+        </a>
         <ul className="footer__list">
           <li>
             <a href="#about" className="footer__link">
@@ -15,37 +17,47 @@ const Footer = () => {
             </a>
           </li>
           <li>
+            <a href="#qualification" className="footer__link">
+              Qualification
+            </a>
+          </li>
+          <li>
+            <a href="#skills" className="footer__link">
+              Skills
+            </a>
+          </li>
+          <li>
             <a href="#portfolio" className="footer__link">
               Projects
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#testimonials" className="footer__link">
               Testimonials
             </a>
-          </li>
+          </li> */}
         </ul>
         <div className="footer__social">
           <a
-            href="https://www.facebook.com/"
-            className="footer__social-link"
-            target="_blank"
-          >
-            <i className="bx bxl-facebook"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/parabneil/"
             className="footer__social-link"
             target="_blank"
           >
             <i className="bx bxl-instagram"></i>
           </a>
           <a
-            href="https://www.twitter.com/"
+            href="https://in.linkedin.com/in/narayan-parab"
             className="footer__social-link"
             target="_blank"
           >
-            <i className="bx bxl-twitter"></i>
+            <i className="bx bxl-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/parabneil"
+            className="footer__social-link"
+            target="_blank"
+          >
+            <i className="bx bxl-github"></i>
           </a>
         </div>
 

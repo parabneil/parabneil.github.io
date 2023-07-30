@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
-import AboutImg from "../../assets/about.jpeg";
-import CV from "../../assets/John-Cv.pdf";
+import AboutImg from "../../assets/about.png";
+import CV from "../../assets/Narayan Parab - Software Developer.pdf";
 import Info from "./Info";
 import resumeData from "../../resume.json";
 

@@ -3,14 +3,13 @@
   "designation": [
     "Software Developer",
     "Frontend Developer",
-    "ReactJS Developer",
+    "React JS Developer",
     "Python Developer",
     "Backend Developer",
     "Full Stack Developer",
-    "Graphic Designer",
-    "Photographer"
+    "Graphic Designer"
   ],
-  "about": "Aspiring web developer with 4+ years of experience in digital marketing firm which mainly focuses on online brand promotion using social media channels. Recently I pivoted my career from digital marketing to website design due to my passion for web space development and problem solving abilities.",
+  "about": "A Software Developer with experience specializing in user interface design, web application development, and continuous improvement. Proficient with HTML, CSS, Javascript, and React JS. Most notably, created the setup for the organization's own react component library for reusable components. Adept at identifying opportunities to enhance the user experience and develop new features to improve app functionality.",
   "dateOfBirth": "07-November-1996",
 
   "educationAndCertifications": [
