@@ -1,154 +1,464 @@
 {
-  "name": "Narayan Parab",
-  "designation": [
+  "name": {
+    "firstName": "Narayan",
+    "lastName": "Parab"
+  },
+  "jobTitle": [
+    "Full Stack Developer",
     "Software Developer",
     "Frontend Developer",
-    "React JS Developer",
-    "Python Developer",
+    "ReactJS Developer",
     "Backend Developer",
-    "Full Stack Developer",
+    "Python Developer",
     "Graphic Designer"
   ],
-  "about": "A Software Developer with experience specializing in user interface design, web application development, and continuous improvement. Proficient with HTML, CSS, Javascript, and React JS. Most notably, created the setup for the organization's own react component library for reusable components. Adept at identifying opportunities to enhance the user experience and develop new features to improve app functionality.",
-  "dateOfBirth": "07-November-1996",
-
-  "educationAndCertifications": [
+  "headline":"",
+  "emailId": "parab.neil25@gmail.com",
+  "mobileNo": "+91 8898613030",
+  "location": "Ambernath, Thane, Maharashtra, India - 421 501",
+  "socialMediaLinks": [
     {
-      "year": "2012",
-      "course": "Course 1",
-      "university": "Mumbai University"
+      "name": "LinkedIn",
+      "icon": "",
+      "link": "https://www.linkedin.com/in/narayan-parab/"
     },
-    {
-      "year": "2012",
-      "course": "Course 1",
-      "university": "Mumbai University"
-    },
-    {
-      "year": "2012",
-      "course": "Course 1",
-      "university": "Mumbai University"
-    },
-    {
-      "year": "2012",
-      "course": "Course 1",
-      "university": "Mumbai University"
-    }
+    { "name": "Github", "icon": "", "link": "https://github.com/parabneil" },
+    { "name": "Instagram", "icon": "", "link": "" },
+    { "name": "Portfolio", "icon": "", "link": "https://parabneil.github.io/" }
   ],
-  "workexperience": [
-    {
-      "year": "2012",
-      "designation": "Software Developer",
-      "companyName": "Teknobuilt",
-      "companyLogo": ""
-    },
-    {
-      "year": "2012",
-      "designation": "Software Developer",
-      "companyName": "Teknobuilt",
-      "companyLogo": ""
-    }
-  ],
+  "professionalSummary": "A Software Developer with experience specializing in user interface design, web application development, and continuous improvement. Proficient with HTML, CSS, Javascript, and React JS. Most notably, created the setup for the organization's own react component library for reusable components. Adept at identifying opportunities to enhance the user experience and develop new features to improve app functionality.",
   "skills": [
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
     },
     {
       "skillName": "Javascript",
       "skillLogo": "",
-      "skillProfiency": ""
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
+    },
+    {
+      "skillName": "Javascript",
+      "skillLogo": "",
+      "skillCategory": "",
+      "skillLevel": ""
     }
   ],
+  "workExperience": [
+    {
+      "jobTitle": "Software Developer",
+      "companyName": "Teknobuilt",
+      "companyLogo": "",
+      "companyLocation": "Vashi, Navi Mumbai",
+      "employmentType": "Full-Time",
+      "startDate": "01-04-2024",
+      "endDate": "30-09-2024",
+      "isCurrent": false,
+      "responsibilities": [],
+      "techStack": []
+    },
+    {
+      "jobTitle": "Software Developer",
+      "companyName": "Teknobuilt",
+      "companyLogo": "",
+      "companyLocation": "Vashi, Navi Mumbai",
+      "employmentType": "Full-Time",
+      "startDate": "01-04-2024",
+      "endDate": "30-09-2024",
+      "isCurrent": false,
+      "responsibilities": [],
+      "techStack": []
+    },
+    {
+      "jobTitle": "Software Developer",
+      "companyName": "Teknobuilt",
+      "companyLogo": "",
+      "companyLocation": "Vashi, Navi Mumbai",
+      "employmentType": "Full-Time",
+      "startDate": "01-04-2024",
+      "endDate": "30-09-2024",
+      "isCurrent": false,
+      "responsibilities": [],
+      "techStack": []
+    },
+    {
+      "jobTitle": "Software Developer",
+      "companyName": "Teknobuilt",
+      "companyLogo": "",
+      "companyLocation": "Vashi, Navi Mumbai",
+      "employmentType": "Full-Time",
+      "startDate": "01-04-2024",
+      "endDate": "30-09-2024",
+      "isCurrent": false,
+      "responsibilities": [],
+      "techStack": []
+    }
+  ],
+
   "projects": [
     {
-      "projectTitle": "Project 1",
-      "projectDescription": "Project Description",
-      "projectPreview": "",
-      "projectLogo": "",
-      "projectCode": "",
-      "projectDemo": "",
-      "projectCategory": ""
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
     },
     {
-      "projectTitle": "Project 1",
-      "projectDescription": "Project Description",
-      "projectPreview": "",
-      "projectLogo": "",
-      "projectCode": "",
-      "projectDemo": "",
-      "projectCategory": ""
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
     },
     {
-      "projectTitle": "Project 1",
-      "projectDescription": "Project Description",
-      "projectPreview": "",
-      "projectLogo": "",
-      "projectCode": "",
-      "projectDemo": "",
-      "projectCategory": ""
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
+    },
+    {
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
+    },
+    {
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
+    },
+    {
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
+    },
+    {
+      "title": "Project 1",
+      "logo": "",
+      "previewUrls": [],
+      "role": "Full Stack Developer",
+      "description": "Project Description",
+      "features": [],
+      "techStack": [],
+      "demoLink": ""
     }
   ],
-  "socialMedia": [
+
+  "education": [
     {
-      "socialIcon": "",
-      "socialLink": "",
-      "socialUserName": ""
+      "degree": "",
+      "institution": "",
+      "location": "",
+      "startDate": "",
+      "endDate": "",
+      "score": ""
     },
     {
-      "socialIcon": "",
-      "socialLink": "",
-      "socialUserName": ""
+      "degree": "",
+      "institution": "",
+      "location": "",
+      "startDate": "",
+      "endDate": "",
+      "score": ""
     },
     {
-      "socialIcon": "",
-      "socialLink": "",
-      "socialUserName": ""
-    },
-    {
-      "socialIcon": "",
-      "socialLink": "",
-      "socialUserName": ""
-    },
-    {
-      "socialIcon": "",
-      "socialLink": "",
-      "socialUserName": ""
-    },
-    {
-      "socialIcon": "",
-      "socialLink": "",
-      "socialUserName": ""
+      "degree": "",
+      "institution": "",
+      "location": "",
+      "startDate": "",
+      "endDate": "",
+      "score": ""
     }
-  ]
+  ],
+
+  "certifications": [
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    },
+    {
+      "name": "",
+      "organization": "",
+      "issueDate": "",
+      "expiryDate": "",
+      "credentialId": "",
+      "credentialURL": ""
+    }
+  ],
+
+  "achievements": [{ "title": "", "description": "", "year": "" }],
+
+  "languages": [
+    { "language": "", "proficiency": "" },
+    { "language": "", "proficiency": "" },
+    { "language": "", "proficiency": "" },
+    { "language": "", "proficiency": "" }
+  ],
+
+  "interests": []
 }

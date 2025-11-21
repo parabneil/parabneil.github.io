@@ -4,11 +4,10 @@ import resumeData from "../../resume.json";
 const Data = () => {
   return (
     <div className="home__data">
-      <h1 className="home__title">{resumeData.name.toUpperCase()}</h1>
+      <h1 className="home__title">{`${resumeData.name.firstName} ${resumeData.name.lastName}`}</h1>
 
-      <h3 className="home__subtitle">{resumeData.designation[0]}</h3>
+      <h3 className="home__subtitle">{resumeData.jobTitle[0]}</h3>
       <p className="home__description">
-        {/* {resumeData.designation.filter((d, index) => index > 0).join(", ")} */}
         A Software Developer with experience specializing in user interface
         design, web application development, and continuous improvement.
         Proficient with HTML, CSS, Javascript, and React JS.
