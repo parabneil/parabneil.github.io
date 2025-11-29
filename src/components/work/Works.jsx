@@ -1,49 +1,56 @@
 import React, { useEffect, useState } from "react";
-import { projectsData, projectsNav } from "./Data";
-import WorkItems from "./WorkItems";
+import { projectsNav } from "../../utils/constants.js";
+import WorkItems from "./WorkItems.jsx";
+import { resumeData } from "../../utils/resume.js";
 
 const Works = () => {
-  const [item, setItem] = useState({ name: "all" });
-  const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(0);
+  const [filterValue, setFilterValue] = useState("all");
+  const [projects, setProjects] = useState(resumeData.projects);
 
   useEffect(() => {
-    if (item.name === "all") {
-      setProjects(projectsData);
+    if (filterValue === "all") {
+      setProjects(resumeData.projects);
     } else {
-      const newProjects = projectsData.filter(
-        (project) => project.category.toLowerCase() === item.name
+      setProjects(
+        resumeData.projects.filter((project) =>
+          project.techStack.includes(filterValue)
+        )
       );
-      setProjects(newProjects);
     }
-  }, [item]);
+  }, [filterValue]);
 
-  const handleClick = (e, index) => {
-    setItem({ name: e.target.textContent.toLowerCase() });
+  const handleClick = (value, index) => {
+    setFilterValue(value);
     setActive(index);
   };
 
   return (
-    <div>
+    <>
+      {/* Filters */}
       <div className="work__filters">
-        {projectsNav.map((item, index) => {
-          return (
-            <span
-              onClick={(e) => handleClick(e, index)}
-              className={`${active === index ? "active-work" : ""} work__item`}
-              key={index}
-            >
-              {item.name}
-            </span>
-          );
-        })}
-      </div>
-      <div className="work__container container grid">
-        {projects.map((item) => (
-          <WorkItems item={item} key={item.id} />
+        {projectsNav.map((navItem, index) => (
+          <span
+            key={navItem.value}
+            className={`work__item ${active === index ? "active-work" : ""}`}
+            onClick={() => handleClick(navItem.value, index)}
+          >
+            {navItem.label}
+          </span>
         ))}
       </div>
-    </div>
+
+      {/* Projects Grid */}
+      <div className="work__container container grid">
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <WorkItems item={project} key={project.title} />
+          ))
+        ) : (
+          <div className="no-projects">No projects to show</div>
+        )}
+      </div>
+    </>
   );
 };
 

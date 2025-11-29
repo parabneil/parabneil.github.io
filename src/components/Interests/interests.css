@@ -1,0 +1,56 @@
+.interests__container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.interest__card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+    transition: 0.3s;
+}
+
+.interest__card:hover {
+    transform: translateY(-4px);
+}
+
+.interest__icon {
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
+
+.interest__name {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.interest__empty {
+    text-align: center;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {}
+
+/* Tablet Devices */
+@media screen and (max-width: 1025px) {}
+
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
+    .interests__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 426px) {
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

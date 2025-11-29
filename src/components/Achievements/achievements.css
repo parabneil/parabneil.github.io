@@ -1,0 +1,60 @@
+.achievements__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.achievement__card {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    transition: 0.3s;
+}
+
+.achievement__card:hover {
+    transform: translateY(-4px);
+}
+
+.achievement__icon {
+    font-size: 1.8rem;
+    color: var(--title-color);
+    margin-bottom: 0.8rem;
+}
+
+.achievement__title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.achievement__description {
+    font-size: var(--small-font-size);
+    margin: 0.5rem 0 0.8rem;
+    color: var(--text-color);
+}
+
+.achievement__year {
+    font-size: var(--smaller-font-size);
+    color: var(--title-color-dark);
+    font-weight: var(--font-medium);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {}
+
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {
+    .achievements__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 769px) {}
+
+/* Mobile Devices */
+@media screen and (max-width: 426px) {}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

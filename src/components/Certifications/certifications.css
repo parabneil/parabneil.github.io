@@ -1,0 +1,95 @@
+.certifications__container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.certification__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  border-radius: 1.25rem;
+  transition: var(--transition);
+}
+
+.certification__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.certification__icon {
+  font-size: 1.8rem;
+  color: var(--title-color);
+  margin-bottom: 0.8rem;
+}
+
+.certification__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+  color: var(--title-color);
+}
+
+.certification__org {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  display: block;
+  margin-bottom: var(--mb-0-5);
+}
+
+.certification__date {
+  font-size: var(--tiny-font-size);
+  color: var(--text-color-light);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.certification__btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: var(--tiny-font-size);
+  padding: 0.4rem 0.8rem;
+  background-color: var(--title-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.certification__btn:hover {
+  background-color: var(--title-color-dark);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {
+  .certifications__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {
+  .certifications__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
+  .certifications__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certification__card {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 426px) {
+  .certifications__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

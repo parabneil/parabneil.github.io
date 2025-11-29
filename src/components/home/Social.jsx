@@ -1,10 +1,15 @@
 import React from "react";
+import { resumeData } from "../../utils/resume.js";
 
 const Social = () => {
   return (
     <div className="home__social">
       <a
-        href="https://www.instagram.com/parabneil/"
+        href={
+          resumeData.socialMediaLinks.find(
+            (media) => media.name === "Instagram"
+          ).link
+        }
         className="home__social-icon"
         target="_blank"
         rel="noreferrer"
@@ -12,7 +17,10 @@ const Social = () => {
         <i className="uil uil-instagram"></i>
       </a>
       <a
-        href="https://in.linkedin.com/in/narayan-parab"
+        href={
+          resumeData.socialMediaLinks.find((media) => media.name === "LinkedIn")
+            .link
+        }
         className="home__social-icon"
         target="_blank"
         rel="noreferrer"
@@ -20,7 +28,10 @@ const Social = () => {
         <i className="uil uil-linkedin"></i>
       </a>
       <a
-        href="https://github.com/parabneil"
+        href={
+          resumeData.socialMediaLinks.find((media) => media.name === "Github")
+            .link
+        }
         className="home__social-icon"
         target="_blank"
         rel="noreferrer"

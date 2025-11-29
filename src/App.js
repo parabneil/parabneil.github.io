@@ -1,25 +1,17 @@
 import "./App.css";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
-import Work from "./components/work/Work";
-import Qualification from "./components/qualification/Qualification";
-import ScrollUp from "./components/scrollup/ScrollUp";
-import Skills from "./components/skills/Skills";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import ScrollUp from "./components/Scrollup/ScrollUp";
+import { headerMenus } from "./utils/headerMenus";
 
 function App() {
   return (
     <>
       <Header />
-      <main className="main">
-        <Home />
-        <About />
-        <Qualification />
-        <Skills />
-        <Work />
-        <Contact />
+      <main>
+        {headerMenus.map((menu) => (
+          <section id={menu.id.replace("#", "")}>{menu.component}</section>
+        ))}
       </main>
       <Footer />
       <ScrollUp />

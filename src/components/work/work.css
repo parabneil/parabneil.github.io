@@ -13,6 +13,8 @@
     font-weight: var(--font-medium);
     border-radius: 0.5rem;
     text-transform: capitalize;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .work__item:hover {
@@ -21,8 +23,9 @@
 }
 
 .work__container {
-    grid-template-columns: repeat(2, max-content);
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -31,10 +34,15 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1.25rem;
     border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.work__card:hover {
+    transform: translateY(-4px);
 }
 
 .work__img {
-    width: 295px;
+    width: 100%;
     border-radius: 1rem;
     margin-bottom: var(--mb-1);
 }
@@ -45,15 +53,28 @@
     margin-bottom: var(--mb-0-5);
 }
 
+.work__description {
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-5);
+}
+
 .work__button {
-    color: var(--text-color);
+    background-color: var(--title-color);
+    color: var(--container-color);
+    border: 1px solid var(--title-color);
     font-size: var(--small-font-size);
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 0.25rem;
+    width: max-content;
+    padding: 0 1rem;
+    min-height: 2rem;
+    border-radius: 1rem;
 }
 
-.wprk__button-icon {
+.work__button-icon {
     font-size: 1rem;
     transition: 0.4s;
 }
@@ -69,9 +90,10 @@
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {
     .work__container {
+                grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
     }
 
@@ -88,25 +110,20 @@
     }
 }
 
-/* For medium devices */
-@media screen and (max-width: 768px) {
-    .work__container {
-        grid-template-columns: max-content;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .work__container {
-        grid-template-columns: 1fr;
-    }
-
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {
     .work__img {
         width: 100%;
     }
 }
 
-/* For small devices */
-@media screen and (max-width: 350px) {
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
+
+    .work__container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .work__item {
         font-size: var(--small-font-size);
     }
@@ -115,3 +132,13 @@
         column-gap: 0.25rem;
     }
 }
+
+/* Mobile Devices */
+@media screen and (max-width: 426px) {
+    .work__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

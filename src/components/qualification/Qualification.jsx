@@ -1,11 +1,28 @@
 import React, { useState } from "react";
 import "./qualification.css";
+import Education from "./Education";
+import WorkExperience from "./WorkExperience";
+
+const tabs = [
+  {
+    id: 1,
+    label: "Education",
+    icon: "uil-graduation-cap",
+    component: <Education />,
+  },
+  {
+    id: 2,
+    label: "Experience",
+    icon: "uil-briefcase-alt",
+    component: <WorkExperience />,
+  },
+];
 
 const Qualification = () => {
-  const [toggle, setToggle] = useState(1);
+  const [activeTab, setActiveTab] = useState(2);
 
   const toggleTab = (index) => {
-    setToggle(index);
+    setActiveTab(index);
   };
 
   return (
@@ -15,162 +32,41 @@ const Qualification = () => {
 
       <div className="qualification__container container">
         <div className="qualification__tabs">
-          <div
-            className={
-              toggle === 1
-                ? "qualification__button qualification__active button--flex"
-                : "qualification__button button--flex"
-            }
-            onClick={() => toggleTab(1)}
-          >
-            <i className="uil uil-graduation-cap qualification__icon"></i>
-            Education
-          </div>
-          <div
-            className={
-              toggle === 2
-                ? "qualification__button qualification__active button--flex"
-                : "qualification__button button--flex"
-            }
-            onClick={() => toggleTab(2)}
-          >
-            <i className="uil uil-briefcase-alt qualification__icon"></i>
-            Experience
-          </div>
+          {tabs.map((tab) => (
+            <button
+              type="button"
+              className={
+                activeTab === tab.id
+                  ? "qualification__button qualification__active button--flex"
+                  : "qualification__button button--flex"
+              }
+              onClick={() => toggleTab(tab.id)}
+              key={tab.id}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              aria-controls={`${tab.label.toLowerCase()}-panel`}
+            >
+              <i
+                className={`uil ${tab.icon} qualification__icon`}
+                aria-hidden="true"
+              ></i>
+              {tab.label}
+            </button>
+          ))}
         </div>
         <div className="qualification__sections">
-          <div
-            className={
-              toggle === 1
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
-            }
-          >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">
-                  Full Stack Web Development Course
-                </h3>
-                <span className="qualification__subtitle">Newton School</span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2021 - 2022
-                </div>
-              </div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
+          {tabs.map((tab) => (
+            <div
+              className={
+                activeTab === tab.id
+                  ? "qualification__content qualification__content-active"
+                  : "qualification__content"
+              }
+              key={tab.id}
+            >
+              {tab.component}
             </div>
-            <div className="qualification__data">
-              <div></div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-              <div>
-                <h3 className="qualification__title">
-                  Bachelor of Science - Computer Science
-                </h3>
-                <span className="qualification__subtitle">
-                  University of Mumbai
-                </span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2014 - 2017
-                </div>
-              </div>
-            </div>
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">
-                  Higher Secondary Certificate (HSC) - Computer Science
-                </h3>
-                <span className="qualification__subtitle">
-                  Maharashtra state board of secondary & higher secondary
-                  education
-                </span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2012 - 2014
-                </div>
-              </div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-            <div className="qualification__data">
-              <div></div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-              <div>
-                <h3 className="qualification__title">
-                  Secondary School Certificate (SSC)
-                </h3>
-                <span className="qualification__subtitle">
-                  Maharashtra State Board of Secondary & Higher Secondary
-                  Education
-                </span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2012
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className={
-              toggle === 2
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
-            }
-          >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Software Developer</h3>
-                <span className="qualification__subtitle">Teknobuilt</span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2022 - Present
-                </div>
-              </div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-              <div>
-                <h3 className="qualification__title">Graphic Designer</h3>
-                <span className="qualification__subtitle">
-                  Ornamax Web Solutions
-                </span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2019 - 2022
-                </div>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Content Writer </h3>
-                <span className="qualification__subtitle">
-                  Ornamax Web Solutions
-                </span>
-                <div className="qualification__calender">
-                  <i className="uil uil-calender-alt"></i>2017 - 2019
-                </div>
-              </div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

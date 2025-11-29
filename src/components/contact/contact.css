@@ -1,34 +1,38 @@
 .contact__container {
-    /* grid-template-columns: repeat(2, max-content); */
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
     justify-content: center;
     column-gap: 6rem;
     padding-bottom: 3rem;
 }
 
-.contact__content {}
+.contact__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .contact__title {
     text-align: center;
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    margin-bottom: var(--mb-1-5);
+    margin-bottom: var(--mb-1);
 }
 
 .contact__info {
-    /* display: grid;
-    row-gap: 1rem;
-    grid-template-columns: 300px; */
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    justify-items: center;
 }
 
 .contact__card {
     background-color: var(--container-color);
-    border: 1ppx solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 0.75rem;
     text-align: center;
-    width: 15rem;
+    width: 100%;
     margin: 1rem;
 }
 
@@ -114,15 +118,26 @@
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {
     .contact__container {
         column-gap: 3rem;
     }
 }
 
-/* For medium devices */
-@media screen and (max-width: 768px) {
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {
+    .contact__info {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__form {
+        width: 100%;
+    }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
     .contact__container {
         grid-template-columns: 1fr;
         row-gap: 3rem;
@@ -140,15 +155,10 @@
     }
 }
 
-@media screen and (max-width: 576px) {
-    .contact__info {
-        grid-template-columns: 1fr;
-    }
-
-    .contact__form {
-        width: 100%;
-    }
+/* Mobile Devices */
+@media screen and (max-width: 426px) {
+    
 }
 
-/* For small devices */
-@media screen and (max-width: 350px) {}
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

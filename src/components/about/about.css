@@ -5,13 +5,15 @@
 }
 
 .about__img {
-    width: 350px;
+    width: min(350px, 80%);
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
     border-radius: 1.5rem;
     justify-self: center;
 }
 
 .about__info {
-    grid-template-columns: repeat(3, 140px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     margin-bottom: var(--mb-2);
 }
@@ -22,10 +24,15 @@
     border-radius: 0.75rem;
     text-align: center;
     padding: 1rem 1.25rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.about__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .about__icon {
-    font-size: 1.5rem;
     color: var(--title-color);
     margin-bottom: var(--mb-0-5);
 
@@ -34,6 +41,7 @@
 .about__title {
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
+
 }
 
 .about__subtitle {
@@ -42,20 +50,18 @@
 
 .about__description {
     /* padding: 0 4rem 0 0; */
+    font-size: var(--small-font-size);
     margin-bottom: var(--mb-2-5);
     text-align: justify;
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {
-    .about__container {
-        grid-template-columns: 1fr;
-        row-gap: 2.5rem;
-    }
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {
 
+    
     .about__img {
-        width: 220px;
+        width: 340px;
     }
 
     .about__box {
@@ -65,8 +71,9 @@
     .about__data {
         text-align: center;
     }
-
+    
     .about__info {
+        grid-template-columns: repeat(2,1fr);
         justify-content: center;
     }
 
@@ -76,21 +83,33 @@
     }
 }
 
-/* For medium devices */
-@media screen and (max-width: 576px) {
-    .about__info {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {
+    
     .about__description {
         padding: 0;
     }
+    
 }
 
-/* For small devices */
-@media screen and (max-width: 350px) {
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .about__img {
+        width: 220px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 426px) {
     .about__info {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

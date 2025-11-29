@@ -1,21 +1,26 @@
-import React from "react";
-import resumeData from "../../resume.json";
+import React, { useEffect, useState } from "react";
+import { resumeData } from "../../utils/resume.js";
 
 const Data = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % resumeData.jobTitle.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="home__data">
       <h1 className="home__title">{`${resumeData.name.firstName} ${resumeData.name.lastName}`}</h1>
 
-      <h3 className="home__subtitle">{resumeData.jobTitle[0]}</h3>
-      <p className="home__description">
-        A Software Developer with experience specializing in user interface
-        design, web application development, and continuous improvement.
-        Proficient with HTML, CSS, Javascript, and React JS.
-      </p>
+      <h3 className="home__subtitle">{resumeData.jobTitle[index] ?? "Software Developer"}</h3>
+      <p className="home__description">{resumeData.headline}</p>
       <a href="#contact" className="button button--flex">
         Say Hello
         <svg
-          class="button__icon"
+          className="button__icon"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

@@ -28,7 +28,7 @@
 
 .nav__logo span {
     font-size: var(--h1-font-size);
-    background-color: var(--title-color-dark);
+    background-color: var(--accent);
     color: var(--container-color);
     padding: 0 0.5rem;
     margin-right: 0.5rem;
@@ -37,12 +37,12 @@
 
 .nav__list {
     display: flex;
-    column-gap: 2rem;
+    gap: 4vw;
 }
 
 .nav__link {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     font-size: var(--small-font-size);
     color: var(--title-color);
@@ -57,92 +57,55 @@
 }
 
 /* Active Link */
+.active-link {
+    border-bottom: 0.1rem solid var(--accent);
+}
+
 .active-link,
 .nav__link:hover {
-    color: var(--title-color-dark);
+    color: var(--accent);
 }
 
 /*Change Background Header*/
 .scroll-header {
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background-color: rgba(20, 20, 20, 0.6);
+    transition: all .3s ease;
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {}
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {}
 
-/* For medium devices */
-@media screen and (max-width: 768px) {
-    .header {
-        top: initial;
-        bottom: 0;
-    }
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {}
+
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
 
     .nav {
         height: var(--header-height);
     }
 
     .nav__menu {
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
 
-    /* Show Menu */
-
-    .show-menu {
-        bottom: 0;
-    }
-
-    .nav__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
     .nav__icon {
-        font-size: 1.2rem;
-    }
-
-    .nav__close {
-        position: absolute;
-        right: 1.3rem;
-        bottom: .5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--title-color);
-    }
-
-    .nav__close:hover {
-        color: var(--title-color-dark);
-    }
-
-    .nav__toggle {
-        font-size: 1.1rem;
-        cursor: pointer;
-    }
-
-    .nav__icon,
-    .nav__close,
-    .nav__toggle {
+        font-size: 0.8rem;
         display: block;
     }
 
-}
-
-/* For small devices */
-@media screen and (max-width: 350px) {
-    .nav__menu {
-        padding: 2rem 0.25rem 4rem;
+    .nav__title {
+        display: none;
     }
 
-    .nav__list {
-        column-gap: 0;
-    }
 }
+
+/* Mobile Devices */
+@media screen and (max-width: 426px) {}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

@@ -4,6 +4,9 @@ footer {
 }
 
 .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 0 6rem;
 }
 
@@ -20,14 +23,16 @@ footer {
 .footer__title span {
     background-color: var(--title-color-dark);
     color: var(--container-color);
-    padding: 0 0.5rem;
-    margin-right: 0.5rem;
+    padding: 0.15rem 0.65rem;
+    margin-right: 0.35rem;
     border-radius: 0.7rem;
 }
 
 .footer__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
     column-gap: 1.5rem;
     margin-bottom: var(--mb-2);
 }
@@ -46,9 +51,10 @@ footer {
     background-color: var(--title-color);
     color: var(--container-color);
     font-size: 1.125rem;
-    padding: 0.4rem;
-    border-radius: 0.5rem;
+    padding: 0.35rem;
+    border-radius: 0.4rem;
     display: inline-flex;
+    cursor: pointer;
 }
 
 .footer__social-link:hover {
@@ -64,8 +70,8 @@ footer {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {
     .footer__social-link {
         padding: 0.25rem;
         border-radius: 0.25rem;
@@ -73,10 +79,14 @@ footer {
     }
 }
 
-/* For medium devices */
-@media screen and (max-width: 768px) {}
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {}
 
-@media screen and (max-width: 576px) {}
+/* Tablet Devices */
+@media screen and (max-width: 769px) {}
 
-/* For small devices */
-@media screen and (max-width: 350px) {}
+/* Mobile Devices */
+@media screen and (max-width: 426px) {}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {}

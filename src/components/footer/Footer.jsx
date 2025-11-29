@@ -1,71 +1,76 @@
 import React from "react";
 import "./footer.css";
+import { resumeData } from "../../utils/resume.js";
+import { headerMenus } from "../../utils/headerMenus.js";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer__container container">
         <a href="#home">
           <h1 className="footer__title">
-            <span>NarayanParab</span>.dev
+            <span>{`${
+              resumeData.name.firstName + resumeData.name.lastName
+            }`}</span>
+            .dev
           </h1>
         </a>
         <ul className="footer__list">
-          <li>
-            <a href="#about" className="footer__link">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#qualification" className="footer__link">
-              Qualification
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="footer__link">
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#portfolio" className="footer__link">
-              Projects
-            </a>
-          </li>
-          {/* <li>
-            <a href="#testimonials" className="footer__link">
-              Testimonials
-            </a>
-          </li> */}
+          {headerMenus.map((menu) => (
+            <li key={menu.id}>
+              <a href={menu.id} className="footer__link">
+                {menu.label}
+              </a>
+            </li>
+          ))}
         </ul>
         <div className="footer__social">
           <a
-            href="https://www.instagram.com/parabneil/"
+            href={
+              resumeData.socialMediaLinks.find(
+                (media) => media.name === "Instagram"
+              ).link
+            }
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
+            title="Instagram Profile"
           >
-            <i className="bx bxl-instagram"></i>
+            <i className="bx bxl-instagram" aria-hidden="true"></i>
           </a>
           <a
-            href="https://in.linkedin.com/in/narayan-parab"
+            href={
+              resumeData.socialMediaLinks.find(
+                (media) => media.name === "LinkedIn"
+              ).link
+            }
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
+            title="LinkedIn Profile"
           >
-            <i className="bx bxl-linkedin"></i>
+            <i className="bx bxl-linkedin" aria-hidden="true"></i>
           </a>
           <a
-            href="https://github.com/parabneil"
+            href={
+              resumeData.socialMediaLinks.find(
+                (media) => media.name === "Github"
+              ).link
+            }
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
+            title="GitHub Profile"
           >
-            <i className="bx bxl-github"></i>
+            <i className="bx bxl-github" aria-hidden="true"></i>
           </a>
         </div>
 
         <div className="footer__copy">
-          Narayan Parab &#169; {new Date().getFullYear()}. All rights reserved.
+          {`${resumeData.name.firstName} ${resumeData.name.lastName}`} &#169;{" "}
+          {currentYear}. All rights reserved.
         </div>
       </div>
     </footer>

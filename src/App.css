@@ -6,23 +6,30 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  /* soft blue-gray hue */
+  --hue: 220;
+  --sat: 8%;
+
+  /* Text Colors */
+  --text-color: hsl(var(--hue), var(--sat), 85%);
+  --title-color: hsl(var(--hue), var(--sat), 96%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 98%);
+
+  /* Backgrounds */
+  --body-color: hsl(var(--hue), var(--sat), 10%);
+  --container-color: hsl(var(--hue), var(--sat), 17%);
+
+  /* Accent for buttons & links */
+  --accent: hsl(45, 100%, 50%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   /*.5rem = 8px | 1rem = 16px ...*/
-  --big-font-size: 3.5rem;
-  --h1-font-size: 2.25rem;
+  --h1-font-size: clamp(1.8rem, 4vw, 2.25rem);
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
+  --big-font-size: 3.5rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
@@ -48,19 +55,9 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
-}
 
-/* Responsive typography */
-@media screen and (max-width: 992px) {
-  :root {
-    --big-font-size: 2.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-  }
+  /*========== Rounder ==========*/
+  --round-size: 13px;
 }
 
 /*=============== BASE ===============*/
@@ -83,6 +80,7 @@ textarea {
 }
 
 body {
+  line-height: 1.6;
   background-color: var(--body-color);
   color: var(--text-color);
 }
@@ -90,6 +88,7 @@ body {
 h1,
 h2,
 h3 {
+  line-height: 1.2;
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -115,12 +114,12 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+  padding: 5rem 0;
 }
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--title-color);
+  color: var(--accent);
 }
 
 .section__subtitle {
@@ -136,7 +135,7 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
+  max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -157,7 +156,7 @@ img {
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--accent);
 }
 
 .button__icon {
@@ -171,7 +170,7 @@ img {
 
 /*=============== CUSTOM SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: 0.5vw;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -182,12 +181,29 @@ img {
   background: var(--title-color);
 }
 
+button,
+.button {
+  transition: background-color .3s ease, color .3s ease;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: background-color .3s;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 4px;
+}
+
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {
-  .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+/* Large Laptop Devices */
+@media screen and (max-width: 1441px) {
+  :root {
+    /* --accent: hsl(343, 79%, 58%); */
+
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.35rem;
+    --h3-font-size: 1.15rem;
   }
 
   .button {
@@ -200,14 +216,37 @@ img {
   }
 }
 
-/* For medium devices */
-@media screen and (max-width: 768px) {
+/* Laptop Devices */
+@media screen and (max-width: 1025px) {
+  :root {
+    /* --accent: hsl(158, 49%, 39%); */
+
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.05rem;
+    --normal-font-size: 0.95rem;
+  }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 769px) {
+  :root {
+    /* --accent: hsl(0, 0%, 100%); */
+
+    --h1-font-size: 1.6rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 1rem;
+    --big-font-size: 2.25rem;
+    --normal-font-size: 0.9rem;
+  }
+
   body {
     margin: 0 0 var(--header-height) 0;
   }
 
   .section {
-    padding: 2rem 0 4rem;
+    padding: 3rem 0;
+
   }
 
   .section__subtitle {
@@ -215,16 +254,26 @@ img {
   }
 }
 
-@media screen and (max-width: 576px) {}
-
-/* For small devices */
-@media screen and (max-width: 350px) {
+/* Mobile Devices */
+@media screen and (max-width: 426px) {
   :root {
-    --big-font-size: 2.25rem;
-  }
+    /* --accent: hsl(249, 79%, 60%); */
 
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    --h1-font-size: 1.45rem;
+    --h2-font-size: 1.15rem;
+    --h3-font-size: 0.95rem;
+    --normal-font-size: 0.875rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 320px) {
+:root {
+    /* --accent: hsl(202, 66%, 39%); */
+
+    --h1-font-size: 1.2rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: 0.95rem;
+    --normal-font-size: 0.875rem;
   }
 }
