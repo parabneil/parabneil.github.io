@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.58a04157.css",
-    "main.js": "/static/js/main.e25c46e9.js",
+    "main.css": "/static/css/main.bdb56993.css",
+    "main.js": "/static/js/main.0a2691ff.js",
     "static/js/504.2f65744e.chunk.js": "/static/js/504.2f65744e.chunk.js",
     "static/media/pokedexapp.png": "/static/media/pokedexapp.ba858a3133601b6562cd.png",
     "static/media/mealfinder.png": "/static/media/mealfinder.a3c72a542a519e69428e.png",
@@ -34,12 +34,12 @@
     "static/media/git.png": "/static/media/git.3264a6ba5af1a5664f7a.png",
     "static/media/figma.png": "/static/media/figma.82e55015985a79ba6335.png",
     "index.html": "/index.html",
-    "main.58a04157.css.map": "/static/css/main.58a04157.css.map",
-    "main.e25c46e9.js.map": "/static/js/main.e25c46e9.js.map",
+    "main.bdb56993.css.map": "/static/css/main.bdb56993.css.map",
+    "main.0a2691ff.js.map": "/static/js/main.0a2691ff.js.map",
     "504.2f65744e.chunk.js.map": "/static/js/504.2f65744e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58a04157.css",
-    "static/js/main.e25c46e9.js"
+    "static/css/main.bdb56993.css",
+    "static/js/main.0a2691ff.js"
   ]
 }
