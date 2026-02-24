@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import ScrollUp from "./components/Scrollup/ScrollUp";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import ScrollUp from "./components/scrollup/ScrollUp";
 import { headerMenus } from "./utils/headerMenus";
 
 function App() {

@@ -1,15 +1,15 @@
-import Home from "../components/Home/Home";
-import About from "../components/About/About";
-import Qualification from "../components/Qualification/Qualification";
+import Home from "../components/home/Home";
+import About from "../components/about/About";
+import Qualification from "../components/qualification/Qualification";
 import Certifications from "../components/Certifications/Certifications";
-import Skills from "../components/Skills/Skills";
-import Services from "../components/Services/Services";
-import Work from "../components/Work/Work";
+import Skills from "../components/skills/Skills";
+import Services from "../components/services/Services";
+import Work from "../components/work/Work";
 import Achievements from "../components/Achievements/Achievements";
-import Testimonials from "../components/Testimonials/Testimonials";
+import Testimonials from "../components/testimonials/Testimonials";
 import Languages from "../components/Languages/Languages";
 import Interests from "../components/Interests/Interests";
-import Contact from "../components/Contact/Contact";
+import Contact from "../components/contact/Contact";
 
 export const headerMenus = [
   { id: "#home", label: "Home", icon: "uil-estate", component: <Home /> },
