@@ -1,3 +1,4 @@
+import React from 'react'
 import Home from "../components/home/Home";
 import About from "../components/about/About";
 import Qualification from "../components/qualification/Qualification";
@@ -10,6 +11,7 @@ import Testimonials from "../components/testimonials/Testimonials";
 import Languages from "../components/Languages/Languages";
 import Interests from "../components/Interests/Interests";
 import Contact from "../components/contact/Contact";
+import { resumeData } from './resume';
 
 export const headerMenus = [
   { id: "#home", label: "Home", icon: "uil-estate", component: <Home /> },
@@ -30,7 +32,7 @@ export const headerMenus = [
     id: "#portfolio",
     label: "Portfolio",
     icon: "uil-scenery",
-    component: <><Services /><Work /><Achievements /><Testimonials /></>,
+    component: <><Services /><Work /><Achievements />{resumeData.testimonials.length > 0 && <Testimonials />}</>,
   },
   {
     id: "#contact",

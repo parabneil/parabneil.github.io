@@ -268,7 +268,7 @@ button,
 
 /* Small Mobile Devices */
 @media screen and (max-width: 320px) {
-:root {
+  :root {
     /* --accent: hsl(202, 66%, 39%); */
 
     --h1-font-size: 1.2rem;

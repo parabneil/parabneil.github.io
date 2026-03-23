@@ -55,7 +55,7 @@ const Contact = () => {
               <a
                 href={
                   resumeData.socialMediaLinks.find(
-                    (media) => media.name === "LinkedIn"
+                    (media) => media.name === "LinkedIn",
                   ).link
                 }
                 target="_blank"
@@ -72,26 +72,37 @@ const Contact = () => {
           <h3 className="contact__title">Write me your projects</h3>
           <form className="contact__form">
             <div className="contact__form-div">
-              <label className="contact__form-tag">Name</label>
+              <label htmlFor="name" className="contact__form-tag">
+                Name
+              </label>
               <input
                 type="text"
+                id="name"
                 name="name"
                 className="contact__form-input"
                 placeholder="Insert your name"
+                autoComplete="true"
               />
             </div>
             <div className="contact__form-div">
-              <label className="contact__form-tag">Email</label>
+              <label htmlFor="email" className="contact__form-tag">
+                Email
+              </label>
               <input
                 type="email"
+                id="email"
                 name="email"
                 className="contact__form-input"
                 placeholder="Insert your email"
+                autoComplete="true"
               />
             </div>
             <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">Project</label>
+              <label htmlFor="project" className="contact__form-tag">
+                Project
+              </label>
               <textarea
+                id="project"
                 name="project"
                 cols={30}
                 rows={10}

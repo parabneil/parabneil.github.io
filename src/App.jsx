@@ -5,18 +5,19 @@ import ScrollUp from "./components/scrollup/ScrollUp";
 import { headerMenus } from "./utils/headerMenus";
 
 function App() {
+
   return (
     <>
       <Header />
       <main>
         {headerMenus.map((menu) => (
-          <section id={menu.id.replace("#", "")}>{menu.component}</section>
+          <section key={menu.id.replace("#", "")} id={menu.id.replace("#", "")}>{menu.component}</section>
         ))}
       </main>
       <Footer />
       <ScrollUp />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

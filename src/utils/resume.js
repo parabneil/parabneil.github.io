@@ -107,6 +107,12 @@ export const resumeData = {
       skillLevel: SKILL_LEVELS["INT"],
     },
     {
+      skillName: "Express.js",
+      skillLogo: skillLogos.expressLogo,
+      skillCategory: "Backend",
+      skillLevel: SKILL_LEVELS["BEG"],
+    },
+    {
       skillName: "Celery",
       skillLogo: skillLogos.celeryLogo,
       skillCategory: "Backend",
@@ -318,25 +324,54 @@ export const resumeData = {
 
   projects: [
     {
-      title: "Todo List Manager",
-      logo: "",
-      previewUrls: [projectPreviews.todoistPreview],
-      role: "Frontend Developer",
+      title: "URL Shortener",
+      logo: "", // Add path to logo if available
+      previewUrls: [projectPreviews.urlShortnerPreview],
+      role: "Full Stack Developer",
       description:
-        "A simple clone of the Todoist-style task manager built with React.",
+        "A high-performance utility to transform long URLs into manageable links, featuring click analytics and custom slugs.",
       features: [
-        "Add, edit and delete tasks",
-        "Create and manage projects (folders) for tasks",
-        "Responsive UI built with React",
-        "Deployed live via GitHub Pages (see demo link)",
+        "Custom short-link generation",
+        "Real-time click tracking and analytics",
+        "QR code generation for shortened links",
       ],
-      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Github Actions"],
-      demoLink: "https://parabneil.github.io/Todoist-clone/",
+      techStack: ["React JS", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+      demoLink: "https://url-shortner-eight-pi.vercel.app/",
+    },
+    {
+      title: "AI Powered Resume Builder",
+      logo: "",
+      previewUrls: [projectPreviews.aiResumeBuilderPreview],
+      role: "Full Stack Developer",
+      description:
+        "An intelligent platform that leverages AI to help users draft professional resumes with real-time content suggestions.",
+      features: [
+        "AI-driven bullet point suggestions",
+        "Live PDF preview and export",
+        "Multiple professional template selection",
+      ],
+      techStack: ["React JS", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Google Gemini API"],
+      demoLink: "https://ai-resume-builder-gray-iota.vercel.app/",
+    },
+    {
+      title: "Vastra - Ecommerce Apparel Store",
+      logo: "",
+      previewUrls: [projectPreviews.eCommerceStorePreview],
+      role: "Full Stack Developer",
+      description:
+        "A premium fashion e-commerce experience featuring seamless product discovery, cart management, and secure checkout.",
+      features: [
+        "Advanced product filtering and search",
+        "Persistent shopping cart functionality",
+        "Secure payment gateway integration",
+      ],
+      techStack: ["React JS", "Node.js", "MongoDB", "Express", "Tailwind CSS", "Stripe API", "Razorpay API"],
+      demoLink: "https://vastra-ecommerce-store.vercel.app/",
     },
     {
       title: "Cricket Scoreboard",
       logo: "",
-      previewUrls: [projectPreviews.cricketPreview],
+      previewUrls: [projectPreviews.cricketScorerAppPreview],
       role: "Frontend Developer",
       description:
         "A live scoreboard web app for cricket matches where users can input team/players and track the score live.",
@@ -347,51 +382,6 @@ export const resumeData = {
       ],
       techStack: ["React JS", "JavaScript", "HTML", "CSS", "Vercel"],
       demoLink: "https://cricket-scoreboard-virid.vercel.app/",
-    },
-    {
-      title: "Meal Finder",
-      logo: "",
-      previewUrls: [projectPreviews.mealfinderPreview],
-      role: "Frontend Developer",
-      description:
-        "A recipe search web app allowing users to find meals (by name, random etc) using an external meals API.",
-      features: [
-        "Search for meals by name",
-        "Get a random meal suggestion",
-        "Display meal details including image and instructions",
-      ],
-      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Github Actions"],
-      demoLink: "https://parabneil.github.io/Meal-Finder/",
-    },
-    {
-      title: "Weather App",
-      logo: "",
-      previewUrls: [projectPreviews.weatherPreview],
-      role: "Frontend Developer",
-      description:
-        "A weather information web app that fetches current weather and possibly forecast for searched locations via a weather API.",
-      features: [
-        "Search for weather by city",
-        "Display current temperature, humidity, wind, etc",
-        "Responsive design",
-      ],
-      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Vercel"],
-      demoLink: "https://weather-app-eight-delta-38.vercel.app/",
-    },
-    {
-      title: "Calculator App",
-      logo: "",
-      previewUrls: [projectPreviews.calculatorPreview],
-      role: "Frontend Developer",
-      description:
-        "A web-based calculator application built to perform basic arithmetic operations with a clean UI.",
-      features: [
-        "Basic arithmetic operations (add, subtract, multiply, divide)",
-        "Responsive UI",
-        "Clear / reset functionality",
-      ],
-      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Github Actions"],
-      demoLink: "https://parabneil.github.io/calculator-app/",
     },
     {
       title: "Pokedex App",
@@ -407,6 +397,67 @@ export const resumeData = {
       ],
       techStack: ["React JS", "JavaScript", "HTML", "CSS", "Vercel"],
       demoLink: "https://pokedex-app-mu-eight.vercel.app/",
+    },
+    {
+      title: "Weather App",
+      logo: "",
+      previewUrls: [projectPreviews.weatherAppPreview],
+      role: "Frontend Developer",
+      description:
+        "A weather information web app that fetches current weather and possibly forecast for searched locations via a weather API.",
+      features: [
+        "Search for weather by city",
+        "Display current temperature, humidity, wind, etc",
+        "Responsive design",
+      ],
+      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Vercel"],
+      demoLink: "https://weather-app-eight-delta-38.vercel.app/",
+    },
+    {
+      title: "Meal Finder",
+      logo: "",
+      previewUrls: [projectPreviews.mealFinderPreview],
+      role: "Frontend Developer",
+      description:
+        "A recipe search web app allowing users to find meals (by name, random etc) using an external meals API.",
+      features: [
+        "Search for meals by name",
+        "Get a random meal suggestion",
+        "Display meal details including image and instructions",
+      ],
+      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Github Actions"],
+      demoLink: "https://meal-finder-ten-tau.vercel.app/",
+    },
+    {
+      title: "Todo List Manager",
+      logo: "",
+      previewUrls: [projectPreviews.todoListAppPreview],
+      role: "Frontend Developer",
+      description:
+        "A simple clone of the Todoist-style task manager built with React.",
+      features: [
+        "Add, edit and delete tasks",
+        "Create and manage projects (folders) for tasks",
+        "Responsive UI built with React",
+        "Deployed live via GitHub Pages (see demo link)",
+      ],
+      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Github Actions"],
+      demoLink: "https://todo-list-app-zeta-inky.vercel.app/",
+    },
+    {
+      title: "Smart Calculator App",
+      logo: "",
+      previewUrls: [projectPreviews.smartCalculatorPreview],
+      role: "Frontend Developer",
+      description:
+        "A web-based calculator application built to perform basic arithmetic operations with a clean UI.",
+      features: [
+        "Basic arithmetic operations (add, subtract, multiply, divide)",
+        "Responsive UI",
+        "Clear / reset functionality",
+      ],
+      techStack: ["React JS", "JavaScript", "HTML", "CSS", "Vercel"],
+      demoLink: "https://calculator-app-one-weld.vercel.app/",
     },
   ],
 
@@ -574,26 +625,26 @@ export const resumeData = {
   ],
 
   testimonials: [
-    {
-      id: 1,
-      image: testimonialAvatars.image1,
-      name: "John Doe",
-      description:
-        "Outstanding work! The entire project was managed with clear communication and delivered exactly as promised.",
-    },
-    {
-      id: 2,
-      image: testimonialAvatars.image2,
-      name: "Hannah Clinton",
-      description:
-        "Professional, detail-oriented, and highly skilled. The final product exceeded our expectations.",
-    },
-    {
-      id: 3,
-      image: testimonialAvatars.image3,
-      name: "Sarah Gill",
-      description:
-        "A fantastic experience. Every stage of the development process was handled with expertise and care.",
-    },
+    // {
+    //   id: 1,
+    //   image: testimonialAvatars.image1,
+    //   name: "John Doe",
+    //   description:
+    //     "Outstanding work! The entire project was managed with clear communication and delivered exactly as promised.",
+    // },
+    // {
+    //   id: 2,
+    //   image: testimonialAvatars.image2,
+    //   name: "Hannah Clinton",
+    //   description:
+    //     "Professional, detail-oriented, and highly skilled. The final product exceeded our expectations.",
+    // },
+    // {
+    //   id: 3,
+    //   image: testimonialAvatars.image3,
+    //   name: "Sarah Gill",
+    //   description:
+    //     "A fantastic experience. Every stage of the development process was handled with expertise and care.",
+    // },
   ],
 };

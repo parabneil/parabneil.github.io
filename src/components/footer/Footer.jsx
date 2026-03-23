@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import { resumeData } from "../../utils/resume.js";
-import { headerMenus } from "../../utils/headerMenus.js";
+import { headerMenus } from "../../utils/headerMenus.jsx";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
