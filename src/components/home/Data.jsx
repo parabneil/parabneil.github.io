@@ -1,5 +1,5 @@
 import React from "react";
-import resumeData from "../../resume.json";
+import resumeData from '../../resume.json'
 
 const Data = () => {
   return (
