@@ -8,7 +8,7 @@ import { sectionTitles } from "../constants/sectionTitles";
 import { resumeData } from "../constants/resumeData";
 import { MoveRight, Send } from "lucide-react";
 
-const Portfolio = ({ isDarkMode }) => {
+const Portfolio = () => {
   const projectsData = resumeData.projects;
 
   return (

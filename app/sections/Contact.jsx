@@ -7,7 +7,7 @@ import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import { MoveRight } from "lucide-react";
 
-const Contact = ({ isDarkMode }) => {
+const Contact = () => {
   const [status, setStatus] = useState({ loading: false, message: "" });
 
   const onSubmit = async (event) => {

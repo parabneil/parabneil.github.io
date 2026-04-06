@@ -9,7 +9,7 @@ import ProfileStats from "../components/ProfileStats";
 import { resumeData } from "../constants/resumeData";
 import { Download, MoveRight } from "lucide-react";
 
-const About = ({ isDarkMode }) => {
+const About = () => {
   const { name, jobTitle, headline } = resumeData;
 
   const cardContainer = {

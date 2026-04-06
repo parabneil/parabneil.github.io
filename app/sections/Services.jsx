@@ -7,7 +7,7 @@ import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import { resumeData } from "../constants/resumeData";
 
-const Services = ({ isDarkMode }) => {
+const Services = () => {
   const serviceData = resumeData.services;
 
   return (
