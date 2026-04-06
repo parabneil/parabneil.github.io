@@ -2,7 +2,11 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-  allowedDevOrigins: ['192.168.0.102'],
+  output: 'export', // Enables static export
+  basePath: '/', // Change to your repo name (e.g., /my-portfolio)
+  images: {
+    unoptimized: true, // GitHub Pages doesn't support Next.js Image Optimization API
+  },
 };
 
 export default nextConfig;
