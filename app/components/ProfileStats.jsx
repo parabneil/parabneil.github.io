@@ -39,13 +39,13 @@ const ProfileStats = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="bg-cyan-700 rounded-lg grid grid-cols-6 grid-rows-12 md:grid-cols-12 md:grid-rows-6 gap-2 mx-auto dark:text-white p-2 h-500 md:h-150"
+      className="bg-cyan-700 rounded-lg grid grid-cols-6 md:grid-cols-12 gap-2 mx-auto dark:text-white p-2"
     >
       {/* Profile Photo */}
       <motion.a
         variants={item}
         href="#hero"
-        className={`col-span-3 row-span-3 md:col-span-2 md:row-span-3 overflow-hidden rounded-lg hover:-translate-y-1 hover:shadow-black border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 dark:hover:shadow-white/10 dark:bg-darkTheme`}
+        className={`col-span-3 row-span-2 md:col-span-2 md:row-span-3 overflow-hidden rounded-lg hover:-translate-y-1 hover:shadow-black border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 dark:hover:shadow-white/10 dark:bg-darkTheme`}
       >
         <Image
           src={assets.user_image}
@@ -59,7 +59,7 @@ const ProfileStats = () => {
       <motion.a
         variants={item}
         href="#education"
-        className={`col-span-3 row-span-2 overflow-hidden md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 border-none flex flex-col justify-center dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
+        className={`col-span-3 row-span-1 overflow-hidden md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 border-none flex flex-col justify-center dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
       >
         <GraduationCap className="mb-2" />
         <span className="text-xs uppercase font-bold opacity-80">
@@ -87,7 +87,7 @@ const ProfileStats = () => {
       <motion.a
         variants={item}
         href="#skills"
-        className={`col-span-6 row-span-4 overflow-hidden md:col-span-4 md:row-span-3 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
+        className={`col-span-6 row-span-1 overflow-hidden md:col-span-4 md:row-span-3 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
       >
         <p className="text-sm font-bold mb-2 uppercase">Tech Stack</p>
         <div className="flex flex-wrap gap-1.5">
@@ -110,7 +110,7 @@ const ProfileStats = () => {
       <motion.a
         variants={item}
         href="#services"
-        className="col-span-3 row-span-3 overflow-hidden text-md md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
+        className="col-span-3 row-span-2 overflow-hidden text-md md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
       >
         <p className="text-sm flex items-center font-bold mb-1">
           <Languages className="w-3 mr-1.5" /> Services
@@ -126,7 +126,7 @@ const ProfileStats = () => {
       <motion.a
         variants={item}
         href="#portfolio"
-        className={`col-span-3 row-span-2 overflow-hidden md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-2 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 flex flex-col items-center justify-evenly dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
+        className={`col-span-3 row-span-1 overflow-hidden md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-2 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 flex flex-col items-center justify-evenly dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
       >
         <p className="text-7xl font-bold">{statsData.projects.length}</p>
         <p className="text-md leading-tight font-bold uppercase text-center">
@@ -170,7 +170,7 @@ const ProfileStats = () => {
       <motion.a
         variants={item}
         href="#about"
-        className={`col-span-6 row-span-52 overflow-hidden md:col-span-6 md:row-span-3 flex flex-col justify-center bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
+        className={`col-span-6 row-span-1 overflow-hidden md:col-span-6 md:row-span-3 flex flex-col justify-center bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
       >
         <p className="text-xl font-bold mb-2 text-black dark:text-cyan-400 uppercase">
           Professional Summary
@@ -182,7 +182,7 @@ const ProfileStats = () => {
       <motion.a
         variants={item}
         href="#contact"
-        className={`col-span-6 row-span-18 overflow-hidden md:col-span-3 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 flex flex-col gap-1 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
+        className={`col-span-6 row-span-1 overflow-hidden md:col-span-3 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 flex flex-col gap-1 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
       >
         <p className="text-sm font-bold pb-2">Connect</p>
         <div className="space-y-3 text-[11px] leading-snug ">
@@ -204,7 +204,7 @@ const ProfileStats = () => {
       {/* Languages (2x2) */}
       <motion.div
         variants={item}
-        className="col-span-3 row-span-24 overflow-hidden text-md md:col-span-3 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:hover:shadow-white dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
+        className="col-span-3 row-span-1 overflow-hidden text-md md:col-span-3 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:hover:shadow-white dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
       >
         <p className="text-sm flex items-center font-bold mb-2">
           <Languages className="w-4 mr-1.5" /> Languages
@@ -224,7 +224,7 @@ const ProfileStats = () => {
       {/* Social Media */}
       <motion.div
         variants={item}
-        className="col-span-3 row-span-12 overflow-hidden text-xs md:col-span-2 md:row-span-1 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg flex flex-col justify-center gap-1 border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
+        className="col-span-3 row-span-1 overflow-hidden text-xs md:col-span-2 md:row-span-1 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-4 rounded-lg flex flex-col justify-center gap-1 border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
       >
         <p className="text-xs flex items-center font-bold">
           <Star className="w-3 mr-1.5" /> Social Media
@@ -239,7 +239,7 @@ const ProfileStats = () => {
       {/* Interests (2x1) */}
       <motion.div
         variants={item}
-        className="col-span-3 row-span-12 md:col-span-4 md:row-span-1 overflow-hidden bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black text-xs rounded-lg p-4 flex flex-col justify-center gap-1 border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
+        className="col-span-6 row-span-1 md:col-span-4 md:row-span-1 overflow-hidden bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black text-xs rounded-lg p-4 flex flex-col justify-center gap-1 border-[0.5px] border-slate-700 cursor-pointer duration-500 dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10"
       >
         <p className="flex items-center font-bold">
           <Heart className="w-3 mr-1.5" /> Interests

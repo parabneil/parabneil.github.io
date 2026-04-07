@@ -35,7 +35,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -10 }}
-            className="group relative rounded-3xl overflow-hidden bg-white dark:bg-darkHover/20 border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-500"
+            className={`${index == 0 && 'col-span-2 row-span-2'} group relative rounded-3xl overflow-hidden bg-white dark:bg-darkHover/20 border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-500`}
           >
             {/* Project Image Container */}
             <div className="aspect-16/10 overflow-hidden">

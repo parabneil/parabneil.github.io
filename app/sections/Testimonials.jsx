@@ -34,15 +34,15 @@ const Testimonials = () => {
             aria-label={`Testimonial by ${t.name}`}
             className="bg-white dark:bg-darkTheme rounded-lg p-6 shadow-sm border border-gray-300 hover:shadow-lg transform transition hover:-translate-y-1"
           >
-            <blockquote className="text-sm font-bold text-black dark:text-gray-200 mb-4.5 leading-tight">
-              “ {t.description} ”
-            </blockquote>
-            <cite className="text-xs text-black dark:text-gray-300 not-italic">
-              - {t.name}
+            <cite className="text-sm text-black dark:text-gray-300 not-italic">
+              {t.name}
             </cite>
-            <p className="font-medium text-sm text-black dark:text-white mb-6">
+            <p className="font-medium text-xs text-black dark:text-white mb-6">
               {t.role}
             </p>
+            <blockquote className="text-sm font-bold text-cyan-700 dark:text-gray-200 mb-4.5 leading-tight">
+              “ {t.description} ”
+            </blockquote>
           </article>
         ))}
       </div>

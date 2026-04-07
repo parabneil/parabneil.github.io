@@ -28,7 +28,7 @@ const Hero = () => {
         className="object-cover opacity-60 z-0"
         priority
       /> */}
-      <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/40 z-10" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/30 z-10" />
 
       {/* HERO IMAGE */}
       <motion.div
@@ -108,7 +108,7 @@ const Hero = () => {
 
             <a
               href="/resume.pdf"
-              className="px-6 py-3 border rounded-full font-heading dark:text-white"
+              className="px-6 py-3 bg-white/20 border rounded-full font-heading dark:text-white"
             >
               Download CV
             </a>
