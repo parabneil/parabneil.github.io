@@ -5,15 +5,12 @@ import { assets } from "@/assets/assets";
 import { resumeData } from "../constants/resumeData";
 import {
   Award,
-  BriefcaseBusiness,
   GraduationCap,
   Heart,
   Languages,
   Mail,
   MapPin,
-  PanelsTopLeft,
   Phone,
-  Share,
   Star,
   Trophy,
 } from "lucide-react";
@@ -37,7 +34,13 @@ const ProfileStats = () => {
   };
 
   return (
-    <div className="bg-cyan-700 sm:bg-amber-300 md:bg-red-500 lg:bg-purple-600 xl:bg-lime-400 2xl:bg-pink-500 rounded-lg grid grid-cols-6 grid-rows-12 md:grid-cols-12 md:grid-rows-6 gap-2 mx-auto dark:text-white p-2 h-500 md:h-150">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="bg-cyan-700 rounded-lg grid grid-cols-6 grid-rows-12 md:grid-cols-12 md:grid-rows-6 gap-2 mx-auto dark:text-white p-2 h-500 md:h-150"
+    >
       {/* Profile Photo */}
       <motion.a
         variants={item}
@@ -243,7 +246,7 @@ const ProfileStats = () => {
         </p>
         <p>{statsData.interests.join(", ")}</p>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

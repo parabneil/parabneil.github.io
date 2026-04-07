@@ -24,7 +24,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       <nav
-        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm dark:bg-darkTheme/50" : ""}`}
+        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all ${isScroll ? "bg-white/50 backdrop-blur-md shadow-lg dark:bg-darkTheme/50" : ""}`}
       >
         {/* Portfolio logo */}
         <a href="#top">
@@ -32,13 +32,13 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Portfolio logo"
             className="w-32 cursor-pointer mr-14"
-            loading="eager"
+            priority
           />
         </a>
 
         {/* Desktop Menu */}
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 transition-colors ${isScroll ? "" : "bg-white shadow-lg bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"}`}
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 transition-colors ${isScroll ? "py-2" : "py-4 bg-white shadow-lg bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"}`}
         >
           {navLinks.map((link) => (
             <li key={link.label}>
@@ -92,15 +92,14 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-cyan-100 transition-all duration-500 dark:bg-darkHover dark:text-white ${isMenuOpen ? "right-0" : "-right-64"}`}
         >
           <li>
-
-          <button
-            className="absolute right-6 top-6"
-            aria-label="close"
-            onClick={() => setIsMenuOpen(false)}
+            <button
+              className="absolute right-6 top-6"
+              aria-label="close"
+              onClick={() => setIsMenuOpen(false)}
             >
-            <X className="w-5" />
-          </button>
-            </li>
+              <X className="w-5" />
+            </button>
+          </li>
 
           {navLinks.map((link) => (
             <li key={link.label}>
@@ -119,4 +118,4 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
   );
 };
 
-export default NavBar;
+export default React.memo(NavBar);

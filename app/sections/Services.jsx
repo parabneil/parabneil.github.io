@@ -1,8 +1,5 @@
-"use client";
-import { assets } from "@/assets/assets";
-import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion"; // consistent import with previous files
+import { motion } from "motion/react"; // consistent import with previous files
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import { resumeData } from "../constants/resumeData";
@@ -30,7 +27,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 my-16"
       >
         {serviceData.map(
           ({ id, icon, title, description, services }, index) => (
@@ -55,13 +52,15 @@ const Services = () => {
 
               {/* Sub-services / Capabilities */}
               {services && (
-                <div className="pt-4 border-t border-gray-100 dark:border-white/5">
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-gray-400 dark:text-gray-500 mb-3">
+                <div className="border-t border-gray-100 dark:border-white/5">
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-gray-400 dark:text-gray-500">
                     Capabilities
                   </p>
-                  <p className="text-xs font-medium text-gray-700 dark:text-gray-300 leading-5">
-                    {Array.isArray(services) ? services.join(" • ") : services}
-                  </p>
+                  <ul className="space-y-1 text-xs font-medium text-gray-700 dark:text-gray-300 leading-5">
+                    {services.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </motion.div>

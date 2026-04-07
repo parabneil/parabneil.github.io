@@ -19,12 +19,14 @@ const Footer = ({ isDarkMode }) => {
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="logo"
+            width={128}
             className="w-32 mx-auto mb-8 hover:scale-105 transition-transform duration-300"
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-600 dark:text-white">
             <a
               href={`mailto:${footerData.emailId}`}
+              aria-label={`Send email to ${resumeData.name.firstName}`}
               className="flex items-center justify-center gap-3 hover:text-cyan-700 transition-colors"
             >
               <Mail size={20} className="text-cyan-700" />
@@ -58,6 +60,9 @@ const Footer = ({ isDarkMode }) => {
           </p>
 
           <ul className="flex flex-wrap items-center gap-6 justify-center">
+            <li>
+              <a href="#top">↑ Back to top</a>
+            </li>
             {socialLinks.map((link) => (
               <li key={link.name}>
                 <a
@@ -67,7 +72,9 @@ const Footer = ({ isDarkMode }) => {
                   className="flex items-center gap-2 hover:text-cyan-700 dark:hover:text-cyan-400 transition-all duration-300 group"
                   title={link.name}
                 >
-                  <span className="hidden lg:inline">{link.name}</span>
+                  <span className="hidden lg:inline" aria-label={link.name}>
+                    {link.name}
+                  </span>
                   <span className="group-hover:scale-110 transition-transform">
                     {link.icon}
                   </span>

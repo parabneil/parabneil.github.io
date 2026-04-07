@@ -1,6 +1,3 @@
-"use client";
-import { assets, infoList } from "@/assets/assets";
-import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
@@ -27,11 +24,11 @@ const About = () => {
 
   return (
     <motion.section
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ once: true }}
-    transition={{ duration: 1 }}
-    id="about"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      id="about"
       className="w-full px-[10%] py-20 scroll-mt-20"
     >
       <SectionTitle
@@ -39,6 +36,7 @@ const About = () => {
         subTitle={sectionTitles.aboutSection.subTitle}
         description={sectionTitles.aboutSection.description}
       />
+
       <div className="flex justify-center items-center gap-4 flex-col lg:flex-row">
         <div className="flex flex-col items-center text-center justify-between gap-5 w-full">
           {/* Greeting */}
@@ -71,7 +69,7 @@ const About = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="max-w-sm mx-auto text-md leading-tight font-heading text-gray-700 dark:text-gray-300"
+            className="max-w-xl md:max-w-2xl mx-auto text-md leading-tight font-heading text-gray-700 dark:text-gray-300"
           >
             {headline}
           </motion.p>
@@ -94,7 +92,7 @@ const About = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              href="/sample-resume.pdf"
+              href="/Narayan-Parab-Full-Stack-Developer-Resume.pdf"
               download
               className="px-6 py-2 border rounded-full border-gray-500 flex items-center gap-2 bg-white hover:bg-gray-50 transition-colors dark:bg-transparent dark:text-white dark:hover:bg-white/10"
             >

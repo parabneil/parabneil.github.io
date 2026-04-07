@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { resumeData } from "../constants/resumeData";
 import { getTimeline } from "../utils/utils";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
@@ -28,7 +27,7 @@ const Education = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
         {eduData.map((edu, index) => (
           <motion.div
-            key={index}
+            key={`${edu.institution.toLowerCase()}-${edu.degree.toLowerCase()}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

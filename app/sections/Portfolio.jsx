@@ -1,4 +1,3 @@
-"use client";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
@@ -45,6 +44,7 @@ const Portfolio = () => {
                 alt={project.title}
                 width={500}
                 height={300}
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="w-full h-full object-cover group-hover:scale-110 duration-700 transition-transform"
               />
               {/* Dark Overlay on Hover */}
@@ -100,12 +100,12 @@ const Portfolio = () => {
                 </span>
                 <div className="w-9 h-9 rounded-full border border-cyan-600 flex items-center justify-center bg-cyan-700 group-hover:border-cyan-500 group-hover:rotate-45 transition-all duration-700">
                   <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Live preview of ${project.title}`}
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Live preview of ${project.title}`}
                   >
-                  <Send color="white" className="w-4" />
+                    <Send color="white" className="w-4" />
                   </a>
                 </div>
               </div>
@@ -118,8 +118,9 @@ const Portfolio = () => {
       <motion.a
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        href="https://github.com/yourusername" // Link to GitHub or full projects page
+        href="https://github.com/parabneil" // Link to GitHub or full projects page
         target="_blank"
+        rel="noopener noreferrer"
         className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-700 rounded-full py-3 px-10 mx-auto mt-10 hover:bg-gray-50 duration-300 dark:text-white dark:border-white dark:hover:bg-darkHover"
       >
         Show More on GitHub

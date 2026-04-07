@@ -1,8 +1,7 @@
-"use client";
 import React, { useMemo } from "react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { resumeData } from "../constants/resumeData";
 import Image from "next/image";
 import { transformSkillsData } from "../utils/utils";
@@ -42,10 +41,10 @@ const Skills = () => {
         description={sectionTitles.skillsSection.description}
       />
 
-      <div className="space-y-16 mt-12 grid grid-cols-1 lg:grid-cols-3">
+      <div className="space-y-16 mt-12 grid grid-cols-1">
         {Object.entries(resumeTransformedData.skills).map(
           ([category, items]) => (
-            <div key={category} className="flex flex-col items-center">
+            <div key={category} className="flex flex-col items-start">
               {/* Category Header */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
@@ -62,7 +61,7 @@ const Skills = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-3 gap-1 w-full justify-center"
+                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-1 w-full justify-center"
               >
                 {items.map((skill) => (
                   <motion.li
@@ -81,6 +80,7 @@ const Skills = () => {
                           width={40}
                           height={40}
                           className="w-8 sm:w-10 h-auto"
+                          loading="lazy"
                         />
                       ) : (
                         <Sparkles className="w-8 text-cyan-700" />

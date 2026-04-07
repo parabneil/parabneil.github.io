@@ -1,3 +1,4 @@
+import { AppWindow, CodeXml, Image, PanelsTopLeft } from "lucide-react";
 import {
     skillLogos,
     projectPreviews,
@@ -585,7 +586,7 @@ export const resumeData = {
     services: [
         {
             id: 1,
-            icon: "uil-web-grid",
+            icon: <PanelsTopLeft/>,
             title: "Frontend Developer",
             description:
                 "I design and build responsive, high-performance user interfaces that deliver seamless digital experiences.",
@@ -598,7 +599,7 @@ export const resumeData = {
         },
         {
             id: 2,
-            icon: "uil-arrow",
+            icon: <CodeXml/>,
             title: "Backend Developer",
             description:
                 "I build secure, reliable, and scalable backend systems that power digital products and business operations.",
@@ -611,7 +612,7 @@ export const resumeData = {
         },
         {
             id: 3,
-            icon: "uil-edit",
+            icon: <AppWindow/>,
             title: "Full-Stack Developer",
             description:
                 "I create end-to-end digital solutions by combining modern frontend interfaces with powerful backend systems.",
@@ -624,7 +625,7 @@ export const resumeData = {
         },
         {
             id: 4,
-            icon: "uil-edit",
+            icon: <Image/>,
             title: "Graphic Designer",
             description:
                 "I create end-to-end digital solutions by combining modern frontend interfaces with powerful backend systems.",
@@ -657,7 +658,7 @@ export const resumeData = {
             name: "Nilesh Galande",
             role: 'UI/UX Designer',
             description:
-                "It’s rare to find a developer with Narayan’s design intuition. Because of his Graphic Design background, he implements pixel-perfect layouts and smooth interactions that stay 100% true to the original vision.",
+                "It’s rare to find a developer with his design intuition. Because of his Graphic Design background, he implements pixel-perfect layouts and smooth interactions that stay 100% true to the original vision.",
         },
               {
             id: 4,
@@ -685,7 +686,7 @@ export const resumeData = {
             name: "Aasif Dange",
             role: 'Peer Developer',
             description:
-                "Narayan is the teammate everyone wants. Whether it’s a difficult Git merge or a complex debugging session, his collaborative spirit and problem-solving mindset make the entire engineering team more effective.",
+                "He is the teammate everyone wants. Whether it’s a difficult Git merge or a complex debugging session, his collaborative spirit and problem-solving mindset make the entire engineering team more effective.",
         },
         
     ],

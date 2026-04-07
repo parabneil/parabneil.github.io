@@ -1,6 +1,5 @@
-"use client";
 import React from "react";
-import { motion } from "framer-motion"; // consistent with previous files
+import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import { resumeData } from "../constants/resumeData";
@@ -27,7 +26,7 @@ const Achievements = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 my-16">
         {achievementData.map((ach, index) => (
           <motion.div
-            key={index}
+            key={`${ach.title.toLowerCase()}-${ach.year.toLowerCase()}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

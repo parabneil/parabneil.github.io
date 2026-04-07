@@ -1,13 +1,13 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { resumeData } from "../constants/resumeData";
 import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
-import Image from "next/image";
 
 const Testimonials = () => {
   const testimonials = resumeData.testimonials;
+
+  if (!testimonials?.length) return null;
 
   return (
     <motion.section
@@ -32,16 +32,17 @@ const Testimonials = () => {
             key={t.id}
             role="article"
             aria-label={`Testimonial by ${t.name}`}
-            tabIndex={0}
             className="bg-white dark:bg-darkTheme rounded-lg p-6 shadow-sm border border-gray-300 hover:shadow-lg transform transition hover:-translate-y-1"
           >
-            <p className="font-medium text-sm text-black dark:text-white mb-6">{t.role}</p>
-            <blockquote className="text-sm text-black dark:text-gray-200 mb-4.5">
-              “{t.description}”
+            <blockquote className="text-sm font-bold text-black dark:text-gray-200 mb-4.5 leading-tight">
+              “ {t.description} ”
             </blockquote>
             <cite className="text-xs text-black dark:text-gray-300 not-italic">
               - {t.name}
             </cite>
+            <p className="font-medium text-sm text-black dark:text-white mb-6">
+              {t.role}
+            </p>
           </article>
         ))}
       </div>

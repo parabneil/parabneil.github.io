@@ -1,8 +1,7 @@
-"use client";
 import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { resumeData } from "../constants/resumeData";
 import { getTimeline } from "../utils/utils";
 import { Award, ExternalLink, ShieldCheck } from "lucide-react";
@@ -28,7 +27,7 @@ const Certifications = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-16">
         {certData.map((cert, index) => (
           <motion.div
-            key={index}
+            key={`${cert.name.toLowerCase()}-${cert.organization.toLowerCase()}`}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
