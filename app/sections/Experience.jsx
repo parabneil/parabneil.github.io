@@ -2,13 +2,13 @@ import React from "react";
 import { sectionTitles } from "../constants/sectionTitles";
 import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
-import { resumeData } from "../constants/resumeData";
 import Image from "next/image";
 import { getTimeline } from "../utils/utils";
 import { Briefcase } from "lucide-react";
+import { useResume } from "../context/ResumeContext";
 
 const Experience = () => {
-  const expData = resumeData.workExperience;
+  const { workExperience } = useResume();
 
   return (
     <motion.section
@@ -30,7 +30,7 @@ const Experience = () => {
         <div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 hidden sm:block" />
 
         <div className="space-y-12">
-          {expData.map((exp, index) => (
+          {workExperience?.map((exp, index) => (
             <motion.div
               key={`${exp.companyName}-${index}`}
               initial={{ opacity: 0, x: -20 }}

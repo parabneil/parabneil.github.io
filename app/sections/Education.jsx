@@ -2,12 +2,12 @@ import React from "react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import { motion } from "motion/react";
-import { resumeData } from "../constants/resumeData";
 import { getTimeline } from "../utils/utils";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import { useResume } from "../context/ResumeContext";
 
 const Education = () => {
-  const eduData = resumeData.education;
+  const {education} = useResume();
 
   return (
     <motion.section
@@ -25,7 +25,7 @@ const Education = () => {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
-        {eduData.map((edu, index) => (
+        {education?.map((edu, index) => (
           <motion.div
             key={`${edu.institution.toLowerCase()}-${edu.degree.toLowerCase()}`}
             initial={{ opacity: 0, y: 20 }}
@@ -45,17 +45,17 @@ const Education = () => {
             </h3>
 
             <div className="space-y-3 mb-6 grow">
-              <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
                 <Calendar size={14} className="text-cyan-700" />
                 <span>{getTimeline(edu.startDate, edu.endDate)}</span>
               </div>
 
-              <p className="font-semibold text-gray-700 dark:text-gray-300">
+              <p className="text-xs font-semibold text-gray-700 dark:text-gray-300 leading-5">
                 {edu.institution}
               </p>
 
-              <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                <MapPin size={14} />
+              <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                <MapPin size={26} />
                 <span>{edu.location}</span>
               </div>
             </div>

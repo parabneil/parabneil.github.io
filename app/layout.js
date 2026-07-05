@@ -1,5 +1,7 @@
 import { Inter, Poppins, Urbanist } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./context/ThemeContext";
+import { ResumeProvider } from "./context/ResumeContext";
 
 // Body font (primary)
 const inter = Inter({
@@ -55,7 +57,12 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className={`${inter.variable} ${urbanist.variable} min-h-screen flex flex-col antialiased leading-8 dark:bg-darkTheme dark:text-white`}>
-        {children}</body>
+        <ThemeProvider>
+          <ResumeProvider>
+            {children}
+          </ResumeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

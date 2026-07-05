@@ -4,11 +4,11 @@ import React from "react";
 import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
-import { resumeData } from "../constants/resumeData";
 import { MoveRight, Send } from "lucide-react";
+import { useResume } from "../context/ResumeContext";
 
 const Portfolio = () => {
-  const projectsData = resumeData.projects;
+  const {projects} = useResume();
 
   return (
     <motion.section
@@ -27,7 +27,7 @@ const Portfolio = () => {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
-        {projectsData.map((project, index) => (
+        {projects?.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -35,12 +35,12 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -10 }}
-            className={`${index == 0 && 'col-span-2 row-span-2'} group relative rounded-3xl overflow-hidden bg-white dark:bg-darkHover/20 border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-500`}
+            className={`group relative rounded-3xl overflow-hidden bg-white dark:bg-darkHover/20 border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-2xl transition-all duration-500`}
           >
             {/* Project Image Container */}
             <div className="aspect-16/10 overflow-hidden">
               <Image
-                src={project.previewUrls[0] || assets.work_1} // Fallback image
+                src={project.previewUrls[0] || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv70JPvxB0syXJHnTgffdlaURsmOu0XANoVQ&s"} // Fallback image
                 alt={project.title}
                 width={500}
                 height={300}
@@ -48,25 +48,10 @@ const Portfolio = () => {
                 className="w-full h-full object-cover group-hover:scale-110 duration-700 transition-transform"
               />
               {/* Dark Overlay on Hover */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-black px-6 py-2 rounded-full font-medium transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 hover:bg-cyan-700 hover:text-white"
-                  aria-label={`Live preview of ${project.title}`}
-                >
-                  View Live Demo
-                </a>
-              </div>
-            </div>
-
-            {/* Project Details */}
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-bold dark:text-white">
-                  {project.title}
-                </h3>
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
+                {/* Project Details */}
+            <div className="p-4">
+              <div className="flex items-center justify-between mb-2">
                 {project.logo && (
                   <Image
                     src={project.logo}
@@ -76,14 +61,17 @@ const Portfolio = () => {
                     className="rounded-md"
                   />
                 )}
+                <h3 className="text-md font-bold dark:text-white">
+                  {project.title}
+                </h3>
               </div>
 
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2 line-clamp-2">
                 {project.description}
               </p>
 
               {/* Tech Stack Badges */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-3">
                 {project.techStack.slice(0, 4).map((tech, i) => (
                   <span
                     key={i}
@@ -94,7 +82,7 @@ const Portfolio = () => {
                 ))}
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-white/5">
+              <div className="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-white/5">
                 <span className="text-xs font-medium text-cyan-700 dark:text-cyan-400">
                   {project.role}
                 </span>
@@ -110,6 +98,19 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-black px-6 py-2 rounded-full font-medium transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 hover:bg-cyan-700 hover:text-white"
+                  aria-label={`Live preview of ${project.title}`}
+                >
+                  View Live Demo
+                </a>
+              </div>
+            </div>
+
+            
           </motion.div>
         ))}
       </div>

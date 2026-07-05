@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const SectionTitle = ({ title, subTitle, description }) => {
   return (
-    <div className="flex flex-col items-center px-4">
+    <div className="flex flex-col items-start px-4">
       {/* Main Title */}
       <motion.h2
         initial={{ opacity: 0, y: -10 }}
@@ -24,7 +24,7 @@ const SectionTitle = ({ title, subTitle, description }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center m-2 text-lg font-heading font-medium"
+          className="text-center text-lg font-heading font-medium"
         >
           {subTitle}
         </motion.span>
@@ -37,7 +37,7 @@ const SectionTitle = ({ title, subTitle, description }) => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="max-w-2xl mx-auto mb-12 font-heading text-center text-gray-600 dark:text-gray-400 leading-relaxed"
+          className="max-w-7xl mb-12 font-heading text-center text-gray-600 dark:text-gray-400 leading-relaxed"
         >
           {description}
         </motion.p>

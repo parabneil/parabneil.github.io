@@ -3,11 +3,12 @@ import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import ProfileStats from "../components/ProfileStats";
-import { resumeData } from "../constants/resumeData";
 import { Download, MoveRight } from "lucide-react";
+import { useResume } from "../context/ResumeContext";
 
 const About = () => {
-  const { name, jobTitle, headline } = resumeData;
+  const { personalInfo } = useResume();
+  const { name, jobTitle, headline } = personalInfo || {};
 
   const cardContainer = {
     hidden: { opacity: 0 },
@@ -47,7 +48,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex items-center gap-2 text-xl md:text-2xl font-heading"
           >
-            Hi! I am {name.firstName} {name.lastName}
+            Hi! I am {name?.firstName || ""} {name?.lastName || ""}
           </motion.h3>
 
           {/* Main Headline */}
@@ -58,7 +59,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg sm:text-xl lg:text-2xl font-heading font-bold leading-tight"
           >
-            {jobTitle[0]}
+            {jobTitle && jobTitle[0] ? jobTitle[0] : ""}
             <br />
             based in Maharashtra.
           </motion.h1>
@@ -71,7 +72,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="max-w-xl md:max-w-2xl mx-auto text-md leading-tight font-heading text-gray-700 dark:text-gray-300"
           >
-            {headline}
+            {headline || ""}
           </motion.p>
 
           {/* CTAs */}

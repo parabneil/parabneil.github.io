@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { resumeData } from "../constants/resumeData";
 import {
   Award,
   GraduationCap,
@@ -15,9 +14,10 @@ import {
   Trophy,
 } from "lucide-react";
 import { START_YEAR } from "../constants/constants";
+import { useResume } from "../context/ResumeContext";
 
 const ProfileStats = () => {
-  const statsData = resumeData;
+  const { personalInfo, achievements, certifications, contactInfo, education, workExperience, testimonials, skills, services, projects } = useResume();
   const currentYear = new Date().getFullYear();
 
   const container = {
@@ -66,7 +66,7 @@ const ProfileStats = () => {
           Education
         </span>
         <p className="text-md font-bold leading-tight">
-          {statsData.education[0].degree}
+          {education[0]?.degree || ""}
         </p>
       </motion.a>
 
@@ -91,9 +91,7 @@ const ProfileStats = () => {
       >
         <p className="text-sm font-bold mb-2 uppercase">Tech Stack</p>
         <div className="flex flex-wrap gap-1.5">
-          {statsData.skills
-            .filter((skill) => skill.skillLogo)
-            .map((skill) => (
+          {skills?.filter((skill) => skill.skillLogo)?.map((skill) => (
               <div key={skill.skillName} className="group relative">
                 <Image
                   src={skill.skillLogo}
@@ -116,7 +114,7 @@ const ProfileStats = () => {
           <Languages className="w-3 mr-1.5" /> Services
         </p>
         <div className="text-[11px] leading-normal">
-          {statsData.services.map((service) => (
+          {services?.map((service) => (
             <p key={service.title}>{service.title}</p>
           ))}
         </div>
@@ -128,7 +126,7 @@ const ProfileStats = () => {
         href="#portfolio"
         className={`col-span-3 row-span-1 overflow-hidden md:col-span-2 md:row-span-2 bg-slate-50 hover:bg-lightHover hover:-translate-y-1 hover:shadow-black p-2 rounded-lg border-[0.5px] border-slate-700 cursor-pointer transition-all duration-500 flex flex-col items-center justify-evenly dark:bg-darkTheme dark:hover:bg-darkHover/50 dark:hover:shadow-white/10`}
       >
-        <p className="text-7xl font-bold">{statsData.projects.length}</p>
+        <p className="text-7xl font-bold">{projects?.length}</p>
         <p className="text-md leading-tight font-bold uppercase text-center">
           Projects Completed
         </p>
@@ -143,7 +141,7 @@ const ProfileStats = () => {
       >
         <Award />
         <span className="text-3xl font-black italic">
-          {statsData.certifications.length}
+          {certifications?.length}
         </span>
         <span className="text-[10px] font-bold leading-tight uppercase">
           Certifications <br /> Completed
@@ -159,7 +157,7 @@ const ProfileStats = () => {
         <p className="flex items-center font-bold">
           <Trophy className="w-3 mr-1.5" /> Achievements
         </p>
-        {statsData.achievements.map((ach) => (
+        {achievements?.map((ach) => (
           <p key={ach.title} className="text-[9px]">
             {ach.title}{" "}
           </p>
@@ -175,7 +173,7 @@ const ProfileStats = () => {
         <p className="text-xl font-bold mb-2 text-black dark:text-cyan-400 uppercase">
           Professional Summary
         </p>
-        <p className="leading-snug text-xs">{statsData.professionalSummary}</p>
+        <p className="leading-snug text-xs">{personalInfo?.professionalSummary}</p>
       </motion.a>
 
       {/* Contact Quick Info */}
@@ -188,15 +186,15 @@ const ProfileStats = () => {
         <div className="space-y-3 text-[11px] leading-snug ">
           <div className="flex items-center gap-3">
             <Mail size={16} className="text-cyan-400" />
-            <span className="truncate">{statsData.emailId}</span>
+            <span className="truncate">{contactInfo?.emailId}</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone size={12} className="text-cyan-400" />
-            <span>{statsData.mobileNo}</span>
+            <span>{contactInfo?.mobileNo}</span>
           </div>
           <div className="flex items-center gap-3">
             <MapPin size={16} className="text-cyan-400" />
-            <span>{statsData.location}</span>
+            <span>{contactInfo?.location}</span>
           </div>
         </div>
       </motion.a>
@@ -210,7 +208,7 @@ const ProfileStats = () => {
           <Languages className="w-4 mr-1.5" /> Languages
         </p>
         <div className="text-[10px] leading-loose ">
-          {statsData.languages.map((lan) => (
+          {personalInfo?.languages?.map((lan) => (
             <p key={lan.language}>
               {lan.language}{" "}
               <span className="text-cyan-700 dark:text-cyan-400">
@@ -230,7 +228,7 @@ const ProfileStats = () => {
           <Star className="w-3 mr-1.5" /> Social Media
         </p>
         <div className="flex items-center justify-evenly text-xs ">
-          {statsData.socialMediaLinks.map((media) => (
+          {contactInfo?.socialMediaLinks?.map((media) => (
             <p key={media.name}>{media.name.charAt(0)} </p>
           ))}
         </div>
@@ -244,7 +242,7 @@ const ProfileStats = () => {
         <p className="flex items-center font-bold">
           <Heart className="w-3 mr-1.5" /> Interests
         </p>
-        <p>{statsData.interests.join(", ")}</p>
+        <p>{personalInfo?.interests?.join(", ")}</p>
       </motion.div>
     </motion.div>
   );

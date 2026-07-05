@@ -2,16 +2,15 @@ import React, { useMemo } from "react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
 import { motion } from "motion/react";
-import { resumeData } from "../constants/resumeData";
 import Image from "next/image";
 import { transformSkillsData } from "../utils/utils";
 import { Sparkles } from "lucide-react";
+import { useResume } from "../context/ResumeContext";
+import { SKILL_LEVELS } from "../constants/constants";
 
 const Skills = () => {
-  const resumeTransformedData = useMemo(
-    () => transformSkillsData(resumeData),
-    [],
-  );
+  const {skills} = useResume()
+  const transformedSkillsData = transformSkillsData(skills);
 
   const listContainer = {
     hidden: { opacity: 0 },
@@ -42,7 +41,7 @@ const Skills = () => {
       />
 
       <div className="space-y-16 mt-12 grid grid-cols-1">
-        {Object.entries(resumeTransformedData.skills).map(
+        {Object.entries(transformedSkillsData.skills).map(
           ([category, items]) => (
             <div key={category} className="flex flex-col items-start">
               {/* Category Header */}
@@ -92,7 +91,7 @@ const Skills = () => {
                         {skill.skillName}
                       </p>
                       <p className="text-[10px] uppercase tracking-tighter text-slate-500 dark:text-slate-400">
-                        {skill.skillLevel}
+                        {SKILL_LEVELS[skill.skillLevel]}
                       </p>
                     </div>
                   </motion.li>

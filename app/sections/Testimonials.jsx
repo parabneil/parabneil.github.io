@@ -1,11 +1,11 @@
 import React from "react";
-import { resumeData } from "../constants/resumeData";
 import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
 import { sectionTitles } from "../constants/sectionTitles";
+import { useResume } from "../context/ResumeContext";
 
 const Testimonials = () => {
-  const testimonials = resumeData.testimonials;
+  const {testimonials} = useResume();
 
   if (!testimonials?.length) return null;
 
@@ -26,23 +26,23 @@ const Testimonials = () => {
         />
       </div>
 
-      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {testimonials.map((t) => (
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {testimonials?.map((t) => (
           <article
             key={t.id}
             role="article"
             aria-label={`Testimonial by ${t.name}`}
             className="bg-white dark:bg-darkTheme rounded-lg p-6 shadow-sm border border-gray-300 hover:shadow-lg transform transition hover:-translate-y-1"
           >
+            <blockquote className="text-xs font-medium italic text-cyan-700 dark:text-gray-200 mb-2 leading-tight">
+              “ {t.description} ”
+            </blockquote>
             <cite className="font-bold text-sm text-black dark:text-gray-300 not-italic">
               {t.name}
             </cite>
-            <p className="text-xs text-black dark:text-white mb-6">
-              {t.role}
+            <p className="text-xs text-black dark:text-white">
+              - {t.role}
             </p>
-            <blockquote className="text-sm font-medium italic text-cyan-700 dark:text-gray-200 mb-4.5 leading-tight">
-              “ {t.description} ”
-            </blockquote>
           </article>
         ))}
       </div>

@@ -18,9 +18,9 @@
   --font-mono: var(--font-geist-mono);
 
   /* Colors */
-  --color-lightHover: #fcf4ff;
-  --color-darkHover: #2a004a;
-  --color-darkTheme: #11001f;
+  --color-lightHover: #EEEEEE;
+  --color-darkHover: #393E46;
+  --color-darkTheme: #222831;
 
   /* Font Families */
   --font-body: "Inter", sans-serif;

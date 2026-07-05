@@ -36,7 +36,7 @@ export const getTimeline = (startDate, endDate) => {
 export const transformSkillsData = (resumeData) => {
   const transformedData = {
     ...resumeData,
-    skills: resumeData.skills.reduce((acc, skill) => {
+    skills: resumeData.reduce((acc, skill) => {
       const parentKey = skill.skillCategory;
 
       if (!acc[parentKey]) {
