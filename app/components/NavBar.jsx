@@ -1,7 +1,8 @@
-import { assets } from "@/assets/assets";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { useResume } from "../context/ResumeContext";
+import { assets } from "@/assets/assets";
 
 const navLinks = [
   { label: "Home", href: "#top" },
@@ -12,6 +13,7 @@ const navLinks = [
 ];
 
 const NavBar = ({ isDarkMode, setIsDarkMode }) => {
+  const { personalInfo, contactInfo } = useResume();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
 
@@ -23,28 +25,34 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>
+      {/* Main Navbar Wrapper */}
       <nav
-        className={`fixed w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all ${isScroll ? "bg-white/50 backdrop-blur-md shadow-lg dark:bg-darkTheme/50" : ""}`}
+        className={`fixed top-0 left-0 right-0 w-full px-6 lg:px-12 xl:px-[8%] z-50 transition-all duration-300 flex items-center justify-between ${
+          isScroll
+            ? "py-3 bg-white/70 dark:bg-darkTheme/70 backdrop-blur-md shadow-sm border-b border-gray-200/20 dark:border-white/10"
+            : "py-5 bg-transparent"
+        }`}
       >
-        {/* Portfolio logo */}
-        <a href="#top">
+        {/* Brand Logo */}
+        <a
+          href="#top"
+          className="flex items-center active:scale-95 transition-transform"
+        >
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Portfolio logo"
-            className="w-32 cursor-pointer mr-14"
+            className="w-28 sm:w-32 h-auto cursor-pointer"
             priority
           />
         </a>
 
-        {/* Desktop Menu */}
-        <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 transition-colors ${isScroll ? "py-2" : "py-4 bg-white shadow-lg bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"}`}
-        >
+        {/* Desktop Navigation Center Menu */}
+        <ul className="hidden md:flex items-center gap-1 lg:gap-2 bg-white/80 dark:bg-darkHover/40 backdrop-blur-sm border border-gray-200/50 dark:border-white/10 rounded-full px-6 py-2 shadow-sm">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className="font-heading dark:text-white hover:text-cyan-700 transition-colors"
+                className="relative px-4 py-2 text-sm font-medium tracking-wide text-gray-700 dark:text-gray-200 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-200 block rounded-full"
               >
                 {link.label}
               </a>
@@ -52,67 +60,80 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           ))}
         </ul>
 
-        {/* Right Side Actions */}
-        <div className="flex items-center gap-4">
+        {/* Action Buttons Right Side */}
+        <div className="flex items-center gap-3">
+          {/* Theme Toggle Button */}
           <button
             onClick={() => setIsDarkMode((prev) => !prev)}
             aria-label="Toggle Dark Mode"
-            className="p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition"
+            className="p-2.5 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition active:scale-90"
           >
             {isDarkMode ? (
-              <Sun color="white" className="w-6" />
+              <Sun className="w-5 h-5 text-amber-400" />
             ) : (
-              <Moon color="black" className="w-6" />
+              <Moon className="w-5 h-5 text-slate-700" />
             )}
           </button>
 
+          {/* Contact CTA Button (Desktop) */}
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-heading dark:text-white dark:border-white/50 hover:bg-gray-50 dark:hover:bg-white/5 transition"
+            className="hidden lg:flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-gray-900 dark:text-white border border-gray-300 dark:border-white/30 rounded-full hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 active:scale-95 shadow-sm"
           >
-            Contact{" "}
-            <ArrowUpRight
-              color={isDarkMode ? "white" : "black"}
-              className="w-5"
-            />
+            Contact
+            <ArrowUpRight className="w-4 h-4" />
           </a>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Trigger Button */}
           <button
-            className="block md:hidden ml-3"
-            aria-label="menu"
+            className="block md:hidden p-2 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition"
+            aria-label="Open navigation menu"
             onClick={() => setIsMenuOpen(true)}
           >
-            <Menu className="w-6" />
+            <Menu className="w-6 h-6" />
           </button>
         </div>
 
-        {/* Mobile Menu Sidebar */}
-        <ul
-          className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-cyan-100 transition-all duration-500 dark:bg-darkHover dark:text-white ${isMenuOpen ? "right-0" : "-right-64"}`}
+        {/* Mobile Navigation Drawer Overlay */}
+        {isMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-sm z-40 md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+
+        {/* Mobile Drawer Panel */}
+        <div
+          className={`fixed top-0 bottom-0 right-0 w-72 max-w-[80vw] h-screen bg-white/90 dark:bg-darkTheme/95 backdrop-blur-lg border-l border-gray-200/30 dark:border-white/10 shadow-2xl z-50 p-6 flex flex-col transition-all duration-300 ease-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         >
-          <li>
+          {/* Close Panel Button */}
+          <div className="flex justify-end mb-8">
             <button
-              className="absolute right-6 top-6"
-              aria-label="close"
+              aria-label="Close navigation menu"
+              className="p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full transition"
               onClick={() => setIsMenuOpen(false)}
             >
-              <X className="w-5" />
+              <X className="w-6 h-6" />
             </button>
-          </li>
+          </div>
 
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="font-heading font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          {/* Mobile Menu Links */}
+          <ul className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="block px-4 py-3 text-lg font-medium text-gray-800 dark:text-gray-100 rounded-xl hover:bg-gray-100 dark:hover:bg-white/10 hover:text-cyan-600 dark:hover:text-cyan-400 transition"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </>
   );

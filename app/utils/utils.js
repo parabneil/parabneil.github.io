@@ -37,7 +37,7 @@ export const transformSkillsData = (resumeData) => {
   const transformedData = {
     ...resumeData,
     skills: resumeData.reduce((acc, skill) => {
-      const parentKey = skill.skillCategory;
+      const parentKey = skill.category;
 
       if (!acc[parentKey]) {
         acc[parentKey] = [];

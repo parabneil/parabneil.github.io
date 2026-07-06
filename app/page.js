@@ -11,7 +11,6 @@ import Education from "./sections/Education";
 import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
 import Testimonials from "./sections/Testimonials";
-import ProfileStats from "./components/ProfileStats";
 import Certifications from "./sections/Certifications";
 import Achievements from "./sections/Achievements";
 
